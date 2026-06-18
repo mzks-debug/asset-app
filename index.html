@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>資産管理アプリ</title>
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIuizh+eUo+euoeeQhuOCouODl+ODqiIsICJzaG9ydF9uYW1lIjogIuizh+eUo+euoeeQhiIsICJkZXNjcmlwdGlvbiI6ICLlrrbml4/jga7os4fnlKPjgpLnrqHnkIbjgZnjgovjgqLjg5fjg6oiLCAic3RhcnRfdXJsIjogIi4iLCAic2NvcGUiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAib3JpZW50YXRpb24iOiAicG9ydHJhaXQiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjZjRmNmZiIiwgInRoZW1lX2NvbG9yIjogIiMzQjgyRjYiLCAibGFuZyI6ICJqYSIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQU1BQUFBREFDQVlBQUFCUzNHd0hBQUFGTTBsRVFWUjRuTzNjUFc3ZFJoZ0ZVRXBJRVNDTkE4UkxjTHBrVTNhZHJNV3A0MDA1WGJ3RUIwZ2FBU29NT0lVaFE1YmVEMzltT01PNTU3U1crV2kvZStjYjhqM3hadXJNTDcvOSs3bjFPVkRQWDMvOGVOUDZIQjVyZWpMQ3pqUzFMY1h1THl6MFhMSjNHWFo3TWNGbmliMktVUDFGQko4dGFoZWgyc0VGbjVKcUZhSDRRUVdmbWtvWDRiYmt3WVNmMmtwbnJFaWJCSjhXU2t5RHpSTkErR21sUlBZMkZVRDRhVzFyQmxjWFFQanB4WllzcmlxQThOT2J0WmxjWEFEaHAxZHJzcm1vQU1KUDc1Wm1kSFlCaEoraldKTFZXUVVRZm81bWJtYXZGa0Q0T2FvNTJTMzZWUWc0bW9zRnNQcHpkTmN5ZkxZQXdzOG9MbVhaRm9ob0p3dGc5V2MwNXpKdEFoRHRXUUdzL296cVZMWk5BS0o5VXdDclA2TjdtbkVUZ0doZkMyRDFKOFhqckpzQVJGTUFvdDFPayswUGVSNHlid0lRVFFHSXBnQkVVd0NpM2JnQUpwa0pRRFFGSUpvQ0VFMEJpS1lBUkZNQW9pa0EwUlNBYUFwQU5BVWdtZ0lRVFFHSXBnQkVVd0NpS1FEUkZJQm9Da0EwQlNDYUFoQk5BWWltQUVSVEFLSXBBTkVVZ0dnS1FMVHZXcDhBN2IxLysrTHNuLzM2KzMrN25VY0xIbzBZN0ZMd254cTFDTFpBb1phRWY4M1BINFVKRUtaRWtFZWFCaVlBMFJRZ1NLbHR6RWpiSVFVSVVUcTBvNVJBQVloMmUzLzNxZlU1VUZtdDFmcm9VK0QrN3BNSlFEWUZJSm9DRUUwQmlIWTdUVjh1QmlESlErWk5BS0lwQU5HK0ZzQTJpQlNQczI0Q0VPMmJBcGdDak81cHhrMEFvajByZ0NuQXFFNWwyd1FnMnNrQ21BS001bHltUFJhbGdlVEhrUFRtYkFIdTd6NU4zLytnSHlYTitmNzh3ODhvUWptWGRqUVhyd0ZzaGNyeEdKSTJybVhZRWwvWmxpQ2JCdlZkdlF0a0NuQlVjN0k3Nnphb0VxempNU1R0ek0zczdNOEJsR0FaanlGcFowbFdGMzBRcGdUMGJtbEdGMzhTckFUWGVReEpHMnV5dWVxckVFcEFiOVptY3ZWM2daU0FYbXpKNHFZdnd5a0JyVzNONE9admd5b0JyWlRJWHBGUGdoOU94SGVIMkVQSlJiZm83d09ZQnRSV09tUEZsMnpUZ0JwcUxhN1ZVcW9JbEZCN1YxRTluWXJBR250dHAzZExwU0l3eDk3WGtidW44ZkUvY0s4eStCWEV2clc4ZWRKME9UNzFEeTlaQ3IrQzJKL2U3aFIydHg4cDlSLzA5NTgvTGZyNTkyOWZURCsvK2FmSWE5ZlVXNEI2TzUrbHVpdkFWa3VEZitydkhxRUlsT0hCV0VRYnFnQmJWdjhheDZGL3d4U2dkR2lWSU1Nd0JZQTFoaWhBcmRYYUZCamZFQVdBdFJTQWFBcEFOQVVnbWdJUVRRR0lwZ0JFVXdDaUtRRFJGSUJvQ2tBMEJTQ2FBaEJOQVlpbUFFUlRBS0lwQU5FVWdHaERGS0RXYzN6V0h0ZjVITWNRQllDMWhpbEE2ZFZvNi9HY3p6RU1VNEJwS3ZlbU9NNCt4K25CVUFXQXBXNWV2Zjc0dWZWSjFMRG1tVDQxVnpibjA2ZGhKOERTTjZ2Mm0rdDgralRzQkhqczBtclg0bzExUHYySUtBQ2NNK3dXQ09aUUFLSXBBTkVVZ0dnS1FEUUZJSm9DRUUwQmlLWUFSRk1Bb2lrQTBSU0FhQXBBTkFVZ21nSVFUUUdJZHZ2aDNjdWIxaWNCTFh4NDkvTEdCQ0NhQWhCTkFZaW1BRVM3bmFZdkZ3T3RUd1QyOUpCNUU0Qm9Da0MwcndXd0RTTEY0NnliQUVUN3BnQ21BS043bW5FVGdHalBDbUFLTUtwVDJUWUJpSGF5QUtZQW96bVhhUk9BYUdjTFlBb3dpa3RadmpnQmxJQ2p1NVpoV3lDaVhTMkFLY0JSemNudXJBbWdCQnpOM016TzNnSXBBVWV4Skt1THJnR1VnTjR0emVqaWkyQWxvRmRyc3JucUxwQVMwSnUxbVZ4OUcxUUo2TVdXTEc3NkhFQUphRzFyQmpkL0VLWUV0RklpZTBYRCsrcjF4ODhsandlbmxGeDBpMzRWd2pTZ3R0SVpxeFpZMDRDU2FpMnUxVmRzUldDTDJydUszYllzaXNBU2UyMm5kOSt6S3dLWDdIMGQyZlNpVlJtWXByWTNUN3E3YTZNVVkrdnRUdUgvVEYvd2Q4Mm1va01BQUFBQVNVVk9SSzVDWUlJPSIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiwgInB1cnBvc2UiOiAiYW55In0sIHsic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBZ0FBQUFJQUNBWUFBQUQwZU5UNkFBQVJPVWxFUVZSNG5PM2R3WTRreFJVRjBKd1JDeVJ2c0dSL0F1ek1UOWxyOHkxNERUK0ZkL2dUYk1sc2tGZ2c0Y1c0aHVxZTZxcktxc3lNOStLZUk3R2JvU09paDdvM1gyUVA3eFpLK3N2Zi8vdmI2RFVBYk9HZi8vamp1OUZyNEZPK0tZTUllSUFQRklReEhQb0JoRDNBT2tyQi9oendEZ1Erd0xZVWd1MDUwQTBJZklCaktRVFBjNEFQRXZvQU5TZ0RqM0ZvS3doOWdOcVVnZnM1cUJ1RVBrQlB5c0IxRHVjTmdoOWdEb3JBWlE3bGpOQUhtSnN5OERzSHNRaCtnRFNLUUhnQkVQd0EyWktMUU9UR0JUOEE1eEtMUU5TR0JUOEExeVFWZ1lpTkNuNEExa2dvQXU5SEwyQnZ3aCtBdFJLeVk5cUdrL0ROQTJCL3MwNERwdHVVNEFkZ0Q3TVZnYW11QUlRL0FIdVpMV09tYURPemZWTUFxRzJHYVVEN0NZRHdCK0JvTTJSUDZ3SXd3emNBZ0o2NloxRExFVWIzUXdkZ0xoMnZCTnBOQUlRL0FOVjB6S1pXQmFEakFRT1FvVnRHdFJoWmREdFVBTEoxdUJJb1B3RVEvZ0IwMHlHN1NoZUFEZ2NJQUpkVXo3Q3lCYUQ2d1FIQUxaV3pyR1FCcUh4Z0FMQkcxVXdyVndDcUhoUUFQS3BpdHBVcUFCVVBDQUMyVUMzanloU0FhZ2NEQUZ1cmxIVWxDa0NsQXdHQVBWWEp2T0VGb01wQkFNQlJLbVRmMEFKUTRRQUFZSVRSR1Rpc0FJemVPQUNNTmpJTGh4UUE0UThBSDR6S3hNTUxnUEFIZ0pkR1pPT2hCVUQ0QThCbFIyZmtZUVZBK0FQQWRVZG01U0VGUVBnRHdIMk95c3poZnc4QUFIQzgzUXVBcDM4QVdPZUk3TnkxQUFoL0FIak0zaG02V3dFUS9nRHduRDJ6MURzQUFCQm9sd0xnNlI4QXRyRlhwbTVlQUlRL0FHeHJqMnpkdEFBSWZ3RFl4OVlaNngwQUFBaTBXUUh3OUE4QSs5b3lhemNwQU1JZkFJNnhWZWE2QWdDQVFFOFhBRS8vQUhDc0xiTFhCQUFBQWoxVkFEejlBOEFZejJid3d3VkErQVBBV005a3NTc0FBQWowVUFIdzlBOEFOVHlheVNZQUFCQm9kUUh3OUE4QXRUeVN6U1lBQUJCb1ZRSHc5QThBTmEzTmFCTUFBQWgwZHdIdzlBOEF0YTNKYWhNQUFBaDBWd0h3OUE4QVBkeWIyU1lBQUJCSUFRQ0FRRGNMZ1BFL0FQUnlUM2FiQUFCQW9Lc0Z3Tk0vQVBSMEs4Tk5BQUFna0FJQUFJSGVMQURHL3dEUTI3VXNOd0VBZ0VBS0FBQUV1bGdBalA4QllBNXZaYm9KQUFBRVVnQUFJTkFuQmNENEh3RG1jaW5iVFFBQUlKQUNBQUNCRkFBQUNQU2lBTGovQjRBNXZjNTRFd0FBQ0tRQUFFQWdCUUFBQW4wc0FPNy9BV0J1NTFsdkFnQUFnUlFBQUFpa0FBQkFJQVVBQUFLOVh4WXZBQUpBaWxQbW13QUFRQ0FGQUFBQ0tRQUFFRWdCQUlCQUNnQUFCRklBQUNDUUFnQUFnZDc1T3dBQUlJOEpBQUFFVWdBQUlKQUNBQUNCRkFBQUNLUUFBRUFnQlFBQUFpa0FBQkJJQVFDQVFBb0FBQVJTQUFBZ2tBSUFBSUVVQUFBSXBBQUFRQ0FGQUFBQ0tRQUFFRWdCQUlCQUNnQUFCRklBQUNDUUFnQUFnUlFBQUFpa0FBQkFJQVVBQUFJcEFBQVFTQUVBZ0VBS0FBQUVVZ0FBSUpBQ0FBQ0JGQUFBQ0tRQUFFQWdCUUFBQWlrQUFCQklBUUNBUUFvQUFBUlNBQUFna0FJQUFJRVVBQUFJcEFBQVFDQUZBQUFDS1FBQUVFZ0JBSUJBQ2dBQUJGSUFBQ0NRQWdBQWdSUUFBQWlrQUFCQUlBVUFBQUlwQUFBUVNBRUFnRUFLQUFBRVVnQUFJSkFDQUFDQkZBQUFDS1FBQUVBZ0JRQUFBaWtBQUJCSUFRQ0FRQW9BQUFSU0FBQWdrQUlBQUlFVUFBQUlwQUFBUUtEUFJpOEFJTUVQMzM1eDk2LzkrcHVmZGxzSG5Mejd5OS8vKzl2b1JRRE1aazNnMzZJUXNBY0ZBR0JEV3diL2E0b0FXMUlBQUo2MForaS9SUm5nV1Y0Q0JIakNpUEFmK1hXWmh3a0F3QU1xQmJCcEFJOHdBUUJZcVZMNEwwdTk5ZENEQWdDd1F0V3dyYm91NmxJQUFPNVVQV1NycjQ5YUZBQ0FPM1FKMXk3clpEd0ZBT0NHYnFIYWJiMk1vUUFBWE5FMVRMdXVtK01vQUFCdjZCNmkzZGZQdmhRQWdBdG1DYzlaOXNIMkZBQUFDS1FBQUx3eTIxUHpiUHRoRys5LytmblgwV3NBS0dQV3NKeDFYenptbDU5L05RRUFnRVFLQUFBRVVnQUEvbS8yTWZucysyTWRCUUFBQWlrQUFFdk8wM0hLUHJsTkFRQ0FRQW9BQUFSNnZ5d2ZmaDRRQUpqZktmTk5BSUI0YWZmaWFmdmxNZ1VBQUFJcEFBQVFTQUVBZ0VBZkM0QVhBUUZnYnVkWmJ3SUFBSUVVQUFBSXBBQUFRS0FYQmNCN0FBQXdwOWNaYndJQUFJRVVBQUFJcEFBQVFLQlBDb0QzQUFCZ0xwZXkzUVFBQUFJcEFBQVE2R0lCY0EwQUFITjRLOU5OQUFBZ2tBSUFBSUhlTEFDdUFRQ2d0MnRaYmdJQUFJRVVBQUFJZExVQXVBWUFnSjV1WmJnSkFBQUV1bGtBVEFFQW9KZDdzdHNFQUFBQ0tRQUFFT2l1QXVBYUFBQjZ1RGV6VFFBQUlORGRCY0FVQUFCcVc1UFZKZ0FBRUdoVkFUQUZBSUNhMW1hMENRQUFCRnBkQUV3QkFLQ1dSN0xaQkFBQUFqMVVBRXdCQUtDR1J6UFpCQUFBQW4zMjZHLzg1ZWRmbDgvLzhQQnZCdzcydzdkZjNQMXJ2LzdtcDkzV0FXem5tWW44VXdtdUJFQmRhd0wvMXU5VkNLQ2VaNi9qcFRkTTVwbmd2L1h2VkFSZ0hrOFhBRk1BR0crUDBMLzFkWlFCR0dlTGwvRzlCQWpOSFJYK1ZiNHVzSTFOSHQxTkFlQjRGUUxZMVFBY2I2c2Z4ZDlzQXVEdkJvRGpWQWovYzlYV0E3UGFNbXRkQVVBelZjTzI2cnFBeXpZdEFLWUFzSy9xSVZ0OWZkRFoxaG03K1FSQUNZQjlkQW5YTHV1RVR2YkkxbDJ1QUpRQTJGYTNVTzIyWHFoc3IwejFEZ0FVMXpWTXU2NGJVdXhXQUV3QjRIbmRRN1Q3K21HMFBiTjAxd21BRWdDUG15VThaOWtISEczdkROMzlDa0FKQUlCMWpzaE83d0JBUWJNOU5jKzJINWpCSVFYQUZBRHVOMnRZenJvdjJOcFJtWG5ZQkVBSkFJRHJqc3pLUTY4QWxBQUF1T3pvakR6OEhRQWxBTjQyKzVoODl2M0JvMFprNDVDWEFKVUFBUGhnVkNZTyt5a0FKUUJlU25rNlR0a24zR05rRmc3OU1VQWxBSUJVb3pOdytOOERNUG9BQU9Cb0ZiSnZlQUZZbGhvSEFRQkhxSko1SlFyQXN0UTVFQmdoN1Y0OGJiOXdVaW5yeWhTQVphbDFNQUN3cFdvWlY2b0FMRXU5QXdLQVoxWE10bklGWUZscUhoUUFQS0pxcHBVc0FNdFM5OEFBNEY2VnM2eHNBVmlXMmdjSEFOZFV6N0RTQldCWjZoOGdBTHpXSWJzK0c3MkFlNXdPOHZNL3RGZ3VBS0U2QlA5SitRbkF1VTRIQzBDV2JoblZxZ0FzUzc4REJtQitIYk9wNVV6ZGxRQUFGWFFNL3BOMkU0QnpuUThlZ042NloxRHJBckFzL2I4QkFQUXpRL1pNTVVOM0pRREFFV1lJL3BQMkU0QnpNMzFqQUtobHRveVo3cEhaTkFDQUxjMFcvQ2ZUcHFRaUFNQXpaZzMrazZtdUFDNlovUnNJd1BZU3NpUGk4ZGcwQUlCN0pBVC9TVlFpS2dJQVhKSVUvQ2VSU2FnSUFMQXNtY0YvRXAyQWlnQkFwdVRnUDVGOGl5SUFrRUx3LzA3aW5Ubi9nNkVNQU14QjZGOG01ZDVnS2dEUW0rQy9UcnJkWUNvQTBJZlF2NTlFVzBFWmVNNFAzMzV4OTYvOStwdWZkbHNITUJlaC94Z3A5aUJsNExZMWdYL3I5eW9Fd0RtaC96ekp0WUhYZnhEVEM4RXp3WC9yMzZrSVFDYUJ2NzNzcE5wSllpSFlJL1J2ZlIxbEFPWWw4UGMzL2Y4TXFJSmZmdjcxazM5bWNsVDRWL202d0xabS80eXNhdjVIMDZKdS9RSHZNRFdvRU1DdUJxQStnVjVUL1pRSlZmMC9tQisvKzlQb0piend3N2RmTEYvOTdUK2psOEVLMWYrTXo4NzU0d3FBMWFxRi8wblZkUUZVcEFDd1N2V1FyYjQrZ0NvVUFPN1dKVnk3ckJOZ0pBV0F1M1FMMVc3ckJUaWFBc0JOWGNPMDY3b0JqcUFBY0ZYM0VPMitmb0M5S0FDOGFaYnduR1VmQUZ0U0FBQWdrQUxBUmJNOU5jKzJINEJuS1FCOFl0YXduSFZmQUk5UUFBQWdrQUlBQUlFVUFGNllmVXcrKy80QTdxVUFBRUFnQllDUFVwNk9VL1lKY0kwQ0FBQ0JGQUFBQ0tRQUFFQWdCWUJsV2ZMdXhkUDJDL0NhQWdBQWdSUUFBQWlrQUFCQUlBVUFBQUlwQUFBUVNBRUFnRUFLQUFBRVVnQUFJSkFDQUFDQkZBQUFDS1FBQUVBZ0JRQUFBaWtBQUJCSUFRQ0FRQW9BQUFSU0FBQWdrQUlBQUlFVUFBQUlwQUFBUUNBRkFBQUNLUUFBRUVnQkFJQkFDZ0FBQkZJQUFDQ1FBZ0FBZ1JRQUFBaWtBQUJBSUFVQUFBSXBBQUFRU0FFQWdFQUtBQUFFVWdBQUlKQUNBQUNCRkFBQUNLUUFBRUFnQlFBQUFpa0FBQkJJQVFDQVFBb0FBQVJTQUFBZ2tBSUFBSUVVQUFBSXBBQ3dMTXV5ZlBXMy80eGV3cUdxN2JmYWV2WldiYi9WMXJPM3RQMXltUUlBQUlFVUFBQUlwQUFBUUNBRmdJOVM3Z1dyN3JQcXVyWldkWjlWMTdXMWxIMXltd0lBQUlFVUFGNlkvZW1nK3Y2cXIrOVoxZmRYZlgzUG1uMS9yS01BQUVBZ0JRQUFBaWtBZkdMV01XR1hmWFZaNTFwZDl0VmxuV3ZOdWk4ZXB3QncwV3dmRnQzMjAyMjl0M1RiVDdmMTNqTGJmdGlHQWdBQWdSUUEzalRMVTBQWGZYUmQ5MnRkOTlGMTNhL05zZysycHdCd1ZmY1BEK3NmeS9ySDZyNSs5cVVBY0ZQWEQ1R3U2MzZ0Nno2NnJ2dTFydnZvdW02T293QndsMjRmSnQzV2UwdTMvWFJiN3kzZDl0TnR2WXloQUhDM0xoOHFYZGE1VnBkOWRWbm5XbDMyMVdXZGpLY0FzRXIxRDVmcTYzdFc5ZjFWWDkrenF1K3YrdnFvUlFGZ3Rhb2ZNbFhYdGJXcSs2eTZycTFWM1dmVmRWR1hBc0JEcW4zWVZGdlAzcXJ0dDlwNjlsWnR2OVhXUXcvdnZ2enJ2MzhidlFoNisvRzdQdzM3Mmo3NG5QOW96cCt1VEFCNDJxZ1BJUjkrSHpqL3Nady9YWmtBc0xrOW40aDg2TjNtL01keS9uU2hBTENiTFQ4SWZmQ3Q1L3pIY3Y1VXB3QndtRFVmaUQ3d3R1Zjh4M0wrVktNQUFFQWdMd0VDUUNBRkFBQUNLUUFBRUVnQkFJQkFDZ0FBQkZJQUFDQ1FBZ0FBZ1JRQUFBaWtBQUJBSUFVQUFBSXBBQUFRU0FFQWdFQUtBQUFFVWdBQUlKQUNBQUNCRkFBQUNLUUFBRUFnQlFBQUFpa0FBQkJJQVFDQVFBb0FBQVJTQUFBZ2tBSUFBSUVVQUFBSXBBQUFRQ0FGQUFBQ0tRQUFFRWdCQUlCQUNnQUFCRklBQUNDUUFnQUFnUlFBQUFpa0FBQkFJQVVBQUFJcEFBQVFTQUVBZ0VBS0FBQUVVZ0FBSUpBQ0FBQ0JGQUFBQ1BUK1g5Ly8rZDNvUlFBQXgvblg5MzkrWndJQUFJRVVBQUFJcEFBQVFDQUZBQUFDS1FBQUVFZ0JBSUJBQ2dBQUJIcS9MQjkrSG5EMFFnQ0EvWjB5M3dRQUFBSXBBQUFRU0FFQWdFQUtBQUFFK2xnQXZBZ0lBSE03ejNvVEFBQUlwQUFBUUNBRkFBQUN2U2dBM2dNQWdEbTl6bmdUQUFBSXBBQUFRQ0FGQUFBQ2ZWSUF2QWNBQUhPNWxPMG1BQUFRU0FFQWdFQVhDNEJyQUFDWXcxdVpiZ0lBQUlFVUFBQUk5R1lCY0EwQUFMMWR5M0lUQUFBSXBBQUFRS0NyQmNBMUFBRDBkQ3ZEVFFBQUlORE5BbUFLQUFDOTNKUGRKZ0FBRUVnQkFJQkFkeFVBMXdBQTBNTzltVzBDQUFDQjdpNEFwZ0FBVU51YXJEWUJBSUJBcXdxQUtRQUExTFEybzAwQUFDRFE2Z0pnQ2dBQXRUeVN6U1lBQUJEb29RSmdDZ0FBTlR5YXlTWUFBQkRvNFFKZ0NnQUFZejJUeFU5TkFKUUFBQmpqMlF4MkJRQUFnWjR1QUtZQUFIQ3NMYkxYQkFBQUFtMVNBRXdCQU9BWVcyWHVaaE1BSlFBQTlyVmwxcm9DQUlCQW14WUFVd0FBMk1mV0didjVCRUFKQUlCdDdaR3R1MXdCS0FFQXNJMjlNdFU3QUFBUWFMY0NZQW9BQU0vWk0wdDNuUUFvQVFEd21MMHpkUGNyQUNVQUFOWTVJanU5QXdBQWdRNHBBS1lBQUhDZm96THpzQW1BRWdBQTF4MlpsWWRlQVNnQkFIRFowUmw1K0RzQVNnQUF2RFFpRzRlOEJLZ0VBTUFIb3pKeDJFOEJLQUVBcEJ1WmhVTi9ERkFKQUNEVjZBd2MvdmNBakQ0QUFEaGFoZXdiWGdDV3BjWkJBTUFScW1SZWlRS3dMSFVPQkFEMlVpbnJ5aFNBWmFsMU1BQ3dwV29aVjZvQUxFdTlBd0tBWjFYTXRuSUZZRmxxSGhRQVBLSnFwcFVzQU10Uzk4QUE0RjZWczZ4c0FWaVcyZ2NIQU5kVXo3RFNCV0JaNmg4Z0FMeldJYnZLTC9EY2wzLzk5MitqMXdBQWIra1EvQ2ZsSndEbk9oMHNBRm02WlZTckFyQXMvUTRZZ1BsMXpLWjJDejduU2dDQWtUb0cvMG03Q2NDNXpnY1BRRy9kTTZoMUFWaVcvdDhBQVBxWklYdmFiK0NjS3dFQTlqUkQ4SiswbndDY20ra2JBMEF0czJYTVZKczVaeG9Bd0JabUMvNlRLVGQxVGhFQTRCR3pCdi9KVkZjQWw4eitEUVJnZXduWk1mMEd6NWtHQUhCTlF2Q2Z4R3owbkNJQXdMbWs0RCtKMi9BNVJRQWdXMkx3bjhSdS9Kd2lBSkFsT2ZoUDRnL2duQ0lBTURmQi96c0g4UVpsQUdBT1F2OHloM0tESWdEUWsrQy96dUdzb0F3QTFDYjA3K2VnSHFRTUFOUWc5Qi9qMERhZ0RBQWNTK2cvendIdVFDRUEySmJBMzU0RFBZQkNBTENPd04rZkF4NUVLUUQ0UU5pUDRkQ0xVaENBV1FqNG12NEhGV3NyZHVaTjBoMEFBQUFBU1VWT1JLNUNZSUk9IiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkifSwgeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FZQUFBRDBlTlQ2QUFBUGNrbEVRVlI0bk8zZHNZNGN4UmJINGNaeVlNbUpBMTRCc3N0TFFYeDVGdWM4bFVOZUFTUklMRG13eEExOHgreXVaM2VtWjdxN3pxbi85MGxrWHJhcTEvVDVkZlhZZlBmRHozLzhzMURPbTdldlJ5OEJZQk9mUG40ZXZRVE9NR1VHTWVDQkZKZnVkd0poREZQb0FJWTl3UFBPM1NORndmNU1waDBZK0FEM2VYb2ZGUVRiTTZrMllPQUQ3RXNRYk0va3VwR2hEekRPdzN1d0dMaU5LYmFDb1E5UWp4aTRqWWwyZ2FFUDBJY1l1SjdwOWd5REg2QzMwMzFjQ0p4bnlqMWc2QVBNeDZuQWVTYmVZdkFEcEhBcThLL295V2Z3QTJRU0FxRUJZUEFEc0N6WklSQTFDUTErQU01SkRJR0lpV2p3QTNDTnBCQjROWG9CZXpQOEFWZ3JZWFpNdThPRUh4NEErNW45TkdDNktXbndBN0NsV1VOZ3FsY0FoajhBZTVsdHhreXhtOWwrS0FEVU5OTnBRUHNUQU1NZmdLUE5NSHRhQjhBTVB3QUFldW8rZzFxdXZ2dEZCMkFPblY4SnREc0JNUHdCcUtiamJHb1ZBQjB2TUFBWnVzMm9GcXZ0ZGxFQnlOVHBsVUQ1RXdEREg0QnVPc3l1MGdIUTRRSUN3RG5WWjFqWkFLaCs0UURna3NxenJHUUFWTDVnQUxCRzFabFdMZ0NxWGlnQXVGWEYyVllxQUNwZUlBRFlRclVaVnlZQXFsMFlBTmhhcFZsWElnQXFYUkFBMkZPVm1UYzhBS3BjQ0FBNFNvWFpOelFBS2x3QUFCaGg5QXdjRmdDak53NEFvNDJjaFVNQ3dQQUhnQzlHemNUREE4RHdCNERIUnN6R1F3UEE4QWVBODQ2ZWtZY0ZnT0VQQUM4N2NsWWVFZ0NHUHdCYzU2aVpPZnp2QVFBQWpyZDdBSGo2QjRCMWpwaWR1d2FBNFE4QXQ5bDdodTRXQUlZL0FOeG56MW5xTXdBQUVHaVhBUEQwRHdEYjJHdW1iaDRBaGo4QWJHdVAyYnBwQUJqK0FMQ1ByV2VzendBQVFLRE5Bc0RUUHdEc2E4dFp1MGtBR1A0QWNJeXRacTVYQUFBUTZPNEE4UFFQQU1mYVl2WTZBUUNBUUhjRmdLZC9BQmpqM2hsOGN3QVkvZ0F3MWoyejJDc0FBQWgwVXdCNCtnZUFHbTZkeVU0QUFDRFE2Z0R3OUE4QXRkd3ltNTBBQUVDZ1ZRSGc2UjhBYWxvN281MEFBRUNncXdQQTB6OEExTFptVmpzQkFJQkFWd1dBcDM4QTZPSGFtZTBFQUFBQ0NRQUFDSFF4QUJ6L0EwQXYxOHh1SndBQUVPakZBUEQwRHdBOVhacmhUZ0FBSUpBQUFJQkF6d2FBNDM4QTZPMmxXZTRFQUFBQ0NRQUFDSFEyQUJ6L0E4QWNucHZwVGdBQUlKQUFBSUJBM3dTQTQzOEFtTXU1MmU0RUFBQUNDUUFBQ0NRQUFDRFFvd0R3L2g4QTV2UjB4anNCQUlCQUFnQUFBZ2tBQUFqME5RQzgvd2VBdVQyYzlVNEFBQ0NRQUFDQVFBSUFBQUlKQUFBSTlHcFpmQUFRQUZLY1pyNFRBQUFJSkFBQUlKQUFBSUJBQWdBQUFna0FBQWdrQUFBZ2tBQUFnRUN2L0IwQUFKRGx6ZHZYVGdBQUlKRUFBSUJBQWdBQUFna0FBQWdrQUFBZ2tBQUFnRUFDQUFBQ0NRQUFDQ1FBQUNDUUFBQ0FRQUlBQUFJSkFBQUlKQUFBSUpBQUFJQkFBZ0FBQWdrQUFBZ2tBQUFna0FBQWdFQUNBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQUFJSkFBQUlCQUFnQUFBZ2tBQUFna0FBQWdrQUFBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBQUNBUUFJQUFBSUpBQUFJSkFBQUlKQUFBSUJBQWdBQUFna0FBQWdrQUFBZ2tBQUFnRUFDQUFBQ0NRQUFDQ1FBQUNDUUFBQ0FRQUlBQUFJSkFBQUlKQUFBSUpBQUFJQkFBZ0FBQWdrQUFBZ2tBQUFna0FBQWdFQUNBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQUFJTkRyMFFzQVNQRGgvYnVyZisxUHYvNjkyenJnNUx2Ly9QZXZmMFl2QW1BMmF3YitKWUtBUFFnQWdBMXRPZmlmRWdKc1NRQUEzR25Qb2Y4Y01jQzlmQWdRNEE0amh2L0k3OHM4bkFBQTNLRFNBSFlhd0MyY0FBQ3NWR240TDB1OTlkQ0RBQUJZb2Vxd3Jib3U2aElBQUZlcVBtU3JyNDlhQkFEQUZib00xeTdyWkR3QkFIQkJ0NkhhYmIyTUlRQUFYdEIxbUhaZE44Y1JBQURQNkQ1RXU2K2ZmUWtBZ0RObUdaNno3SVB0Q1FBQUNDUUFBSjZZN2FsNXR2MndqVmVmUG40ZXZRYUFNbVlkbHJQdWk5dDgrdmpaQ1FBQUpCSUFBQkJJQUFEODMrekg1TFB2ajNVRUFBQUVFZ0FBUzg3VGNjbyt1VXdBQUVBZ0FRQUFnVjR0eTVjL0R3Z0F6TzgwODUwQUFQSFMzb3VuN1pmekJBQUFCQklBQUJCSUFBQkFvSzhCNElPQUFEQzNoN1BlQ1FBQUJCSUFBQkJJQUFCQW9FY0I0SE1BQURDbnB6UGVDUUFBQkJJQUFCQklBQUJBb0c4Q3dPY0FBR0F1NTJhN0V3QUFDQ1FBQUNEUTJRRHdHZ0FBNXZEY1RIY0NBQUNCQkFBQUJIbzJBTHdHQUlEZVhwcmxUZ0FBSUpBQUFJQkFMd2FBMXdBQTBOT2xHZTRFQUFBQ1hRd0Fwd0FBME1zMXM5c0pBQUFFRWdBQUVPaXFBUEFhQUFCNnVIWm1Pd0VBZ0VCWEI0QlRBQUNvYmMyc2RnSUFBSUZXQllCVEFBQ29hZTJNZGdJQUFJRldCNEJUQUFDbzVaYlo3QVFBQUFMZEZBQk9BUUNnaGx0bnNoTUFBQWowK3RZdi9QVHg4L0xtN2MxZkRoenN3L3QzVi8vYW4zNzllN2QxQU51NTUwVCtyZ2t1QXFDdU5RUC8wdGNLQXFqbjN0ZnhwamRNNXA3QmYrbmZLUVJnSG5jSGdGTUFHRytQb1gvcCs0Z0JHR2VMRCtQN0VDQTBkOVR3ci9KOWdXMXM4dWp1RkFDT1YyRUFlelVBeDl2cWorSnZkZ0xnN3dhQTQxUVkvZzlWV3cvTWFzdFo2eFVBTkZOMTJGWmRGM0RlcGdIZ0ZBRDJWWDNJVmw4ZmRMYjFqTjM4QkVBRXdENjZETmN1NjRSTzlwaXR1N3dDRUFHd3JXNUR0ZHQ2b2JLOVpxclBBRUJ4WFlkcDEzVkRpdDBDd0NrQTNLLzdFTzIrZmhodHoxbTY2d21BQ0lEYnpUSThaOWtISEczdkdicjdLd0FSQUFEckhERTdmUVlBQ3BydHFYbTIvY0FNRGdrQXB3Qnd2Vm1INWF6N2dxMGROVE1QT3dFUUFRRHdzaU5uNWFHdkFFUUFBSngzOUl3OC9ETUFJZ0NlTi9zeCtlejdnMXVObUkxRFBnUW9BZ0RnaTFFemNkaWZBaEFCOEZqSzAzSEtQdUVhSTJmaDBEOEdLQUlBU0RWNkJnNy9ld0JHWHdBQU9GcUYyVGM4QUphbHhvVUFnQ05VbVhrbEFtQlo2bHdRR0NIdHZYamFmdUdrMHF3ckV3RExVdXZDQU1DV3FzMjRVZ0d3TFBVdUVBRGNxK0pzS3hjQXkxTHpRZ0hBTGFyT3RKSUJzQ3gxTHhnQVhLdnlMQ3NiQU10Uys4SUJ3RXVxejdEU0FiQXM5UzhnQUR6VllYYTlIcjJBYTV3dTVKdTNMWllMUUtnT2cvK2svQW5BUTUwdUxBQlp1czJvVmdHd0xQMHVNQUR6NnppYldwNnBleVVBUUFVZEIvOUp1eE9BaHpwZmVBQjY2ejZEV2dmQXN2VC9BUURRend5elo0b3pkSzhFQURqQ0RJUC9wUDBKd0VNei9XQUFxR1cyR1RQZEk3UFRBQUMyTk52Z1A1bDJTZ29CQU80eDYrQS9tZW9Wd0Rtei93QUIyRjdDN0loNFBIWWFBTUExRWdiL1NkUkVGQUlBbkpNMCtFOGlKNkVRQUdCWk1nZi9TZlFFRkFJQW1aSUgvNG5KdHdnQmdCUUcvNzlNdkFjZS9zWVFBd0J6TVBUUE0rV2U0VlFBb0RlRC8yV20yd1ZPQlFENk1QU3ZaNkt0SUFidTgrSDl1NnQvN1UrLy9yM2JPb0M1R1BxM01jVnVKQVl1V3pQd0wzMnRJQUFlTXZUdlozSnQ0T2x2eFBRZ3VHZndYL3AzQ2dISVpPQnZMM3RTN1NReENQWVkrcGUranhpQWVSbjQrNXYrZndaVXdhZVBuNy81WnlaSERmOHEzeGZZMXV6M3lLcm1melF0NnRKdjhBNm5CaFVHc0ZjRFVKK0JYbFA5S1JPcStuOHd2Ly8yL2VnbFBQTGgvYnZseDEvK0hMME1WcWorZTN4MnJqOWVBYkJhdGVGL1VuVmRBQlVKQUZhcFBtU3JydytnQ2dIQTFib00xeTdyQkJoSkFIQ1Zia08xMjNvQmppWUF1S2pyTU8yNmJvQWpDQUJlMUgySWRsOC93RjRFQU0rYVpYak9zZytBTFFrQUFBZ2tBRGhydHFmbTJmWURjQzhCd0RkbUhaYXo3Z3ZnRmdJQUFBSUpBQUFJSkFCNFpQWmo4dG4zQjNBdEFRQUFnUVFBWDZVOEhhZnNFK0FsQWdBQUFna0FBQWdrQUFBZ2tBQmdXWmE4OStKcCt3VjRTZ0FBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBTXV5TE11UHYvdzVlZ21IcXJiZmF1dlpXN1g5Vmx2UDN0TDJ5M2tDQUFBQ0NRQUFDQ1FBQUNDUUFPQ3JsUGVDVmZkWmRWMWJxN3JQcXV2YVdzbyt1VXdBQUVBZ0FjQWpzejhkVk45ZjlmWGRxL3IrcXEvdlhyUHZqM1VFQUFBRUVnQUFFRWdBOEkxWmp3bTc3S3ZMT3RmcXNxOHU2MXhyMW4xeE93SEFXYlBkTExydHA5dDZMK20ybjI3cnZXUzIvYkFOQVFBQWdRUUF6NXJscWFIclBycXUrNm11KytpNjdxZG0yUWZiRXdDOHFQdk53L3JIc3Y2eHVxK2ZmUWtBTHVwNkUrbTY3cWU2N3FQcnVwL3F1byt1NitZNEFvQ3JkTHVaZEZ2dkpkMzIwMjI5bDNUYlQ3ZjFNb1lBNEdwZGJpcGQxcmxXbDMxMVdlZGFYZmJWWloyTUp3QllwZnJOcGZyNjdsVjlmOVhYZDYvcSs2dStQbW9SQUt4VzlTWlRkVjFicTdyUHF1dmFXdFY5VmwwWGRRa0FibEx0WmxOdFBYdXJ0dDlxNjlsYnRmMVdXdzg5ZlBmRHozLzhNM29SOVBiN2I5OFArOTV1Zks3L2FLNC9YVGtCNEc2amJrSnVmbCs0L21PNS9uVGxCSURON2ZsRTVLWjNtZXMvbHV0UEZ3S0EzV3g1STNUalc4LzFIOHYxcHpvQndHSFczQkRkOExibitvL2wrbE9OQUFDQVFENEVDQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBVDZId0ZzV2xXVGUrZjdBQUFBQUVsRlRrU3VRbUNDIiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJtYXNrYWJsZSJ9XX0=">
+<meta name="theme-color" content="#3B82F6">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="資産管理">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAEuklEQVR4nO3dO25cZRjH4TMWBRJNkMgSoINNQQ1rCTXZVOjIEkCCxpILS6GIbNmTuZzLdzv/eR4pVezxF83Pr9+5HOcwDeDHX//91PsMbPfn798eep+hywEEfBt6BN7sC4r4trWKu+oXETGn1Iy7yg0LmTlqhH1X+gbFzFw1Win2HSJktig1rYtMaDGzVamGNn1XCJkatkzr1RNazNSypa1VQYuZ2tY2tjhoMdPKmtYWBS1mWlva3OygxUwvS9qbFbSY6W1ug1eDFjOjmNNi8Ze+oaeLQZvOjOZak2eDFjOjutSmlYMoJ4M2nRnduUa/CFrM7MWpVq0cRHkVtOnM3hw3a0ITRdBEeQ7ausFevWzXhCaKoIlyN03WDfbvqWETmiiCJoqgiXKwP5PEhCaKoIkiaKIImiiCJoqgiSJoogiaKIImiqCJImiiCJoogiaKoIkiaKIImiiCJoqgiSJoogiaKIImiqCJImiifNX7ANT14d2bs3/302//NTtHK37RTKhLIR9LCtvKEWhJzGs+fmSCDrM2zpSoBR1ka5QJUQs6RKkY9x61oIki6AClp+qep7SgiSJootw93D/2PgMU8XD/aEKTRdBEETRR7qbp8+4Be/bUsAlNFEET5Tloawd79bJdE5oogibKq6CtHezNcbMmNFG+uOr74f5x+vobF4OXcGtXXLd2aqM4Wa6ot5nzfuKnjxH2OufWYytHYbd8xfUIzgbtAeJyt37FdSuX2rw4oUU9nyuu27jWpJWjAFdcj+Nq0KY0o5jT4qwJLerzXHHdxtwGZ68coqaXJe0t2qFFTWtLm1v8oFDUtLKmtVXPcoia2tY2tvppO1FTy5a2Nr1h4+kLe98HJZQYkkVeWDGt2apUQ8VGq2nNGqWHYfGXvk1r5qrRSpVxalpzSc2hV7W4lwdvHberRcbS6id3s8paxe1qkXH0WD+7vH304f7x1Z9SXC3SV637dYkhltwS//i//vhu1ed9ePdm+uGXfzZ//ZJGeGA9whnWiHiD/9qYS30+49h90KViFHWG3QcNL+066NJT1ZTev10HDccETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNlF0HXfrXD6y5PWcYy66DhmO7D7rUNNlyO84wjt0HPU3b74QSd6IzjCEi6Glaf2eUvBOdob+YoKdp+Z1S4050hr4O3//896feh6jh0i+NaXUHOkN7sUFzm6JWDhA0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEET5e7j+7eH3oeAEj6+f3swoYkiaKIImih30/R59+h9ENjiqWETmiiCJspz0NYO9upluyY0UQRNlFdBWzvYm+NmTWiifBG0Kc1enGr15IQWNaM716iVgyhngzalGdWlNi9OaFEzmmtNWjmIcjVoU5pRzGlx1oQWNb3NbXD2yiFqelnS3qIdWtS0trS5xQ8KRU0ra1pb9SyHqKltbWOrn7YTNbVsaatIlP43WkooMSSLvLBiWrNVqYaKh2has0TpYVj8pW/TmrlqtFI1PtOaU2oOvWbTVNy3rdVP7i7rgbhvQ4/1c4h9V+AZRnj89D/+pN1m3EzafAAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAFM0lEQVR4nO3cPW7dRhgFUEpIESCNA8RLcLpkU3adrMWp4005XbwEB0gaASoMOIUhQ5beD39mOMO557SW+Wi/e+cb8j3xZurML7/9+7n1OVDPX3/8eNP6HB5rejLCzjS1LcXuLyz0XLJ3GXZ7McFnib2KUP1FBJ8taheh2sEFn5JqFaH4QQWfmkoX4bbkwYSf2kpnrEibBJ8WSkyDzRNA+GmlRPY2FUD4aW1rBlcXQPjpxZYsriqA8NObtZlcXADhp1drsrmoAMJP75ZmdHYBhJ+jWJLVWQUQfo5mbmavFkD4Oao52S36VQg4mosFsPpzdNcyfLYAws8oLmXZFohoJwtg9Wc05zJtAhDtWQGs/ozqVLZNAKJ9UwCrP6N7mnETgGhfC2D1J8XjrJsARFMAot1Ok+0PeR4ybwIQTQGIpgBEUwCi3bgAJpkJQDQFIJoCEE0BiKYARFMAoikA0RSAaApANAUgmgIQTQGIpgBEUwCiKQDRFIBoCkA0BSCaAhBNAYimAERTAKIpANEUgGgKQLTvWp8A7b1/++Lsn/36+3+7nUcLHo0Y7FLwnxq1CLZAoZaEf83PH4UJEKZEkEeaBiYA0RQgSKltzEjbIQUIUTq0o5RAAYh2e3/3qfU5UFmt1froU+D+7pMJQDYFIJoCEE0BiHY7TV8uBiDJQ+ZNAKIpANG+FsA2iBSPs24CEO2bApgCjO5pxk0Aoj0rgCnAqE5l2wQg2skCmAKM5lymPRalgeTHkPTmbAHu7z5N3/+gHyXN+f78w88oQjmXdjQXrwFshcrxGJI2rmXYEl/ZliCbBvVdvQtkCnBUc7I76zaoEqzjMSTtzM3s7M8BlGAZjyFpZ0lWF30QpgT0bmlGF38SrATXeQxJG2uyueqrEEpAb9ZmcvV3gZSAXmzJ4qYvwykBrW3N4OZvgyoBrZTIXpFPgh9OxHeH2EPJRbfo7wOYBtRWOmPFl2zTgBpqLa7VUqoIlFB7V1E9nYrAGnttp3dLpSIwx97Xkbun8fE/cK8y+BXEvrW8edJ0OT71Dy9ZCr+C2J/e7hR2tx8p9R/0958/Lfr5929fTD+/+afIa9fUW4B6O5+luivAVkuDf+rvHqEIlOHBWEQbqgBbVv8ax6F/wxSgdGiVIMMwBYA1hihArdXaFBjfEAWAtRSAaApANAUgmgIQTQGIpgBEUwCiKQDRFIBoCkA0BSCaAhBNAYimAERTAKIpANEUgGhDFKDWc3zWHtf5HMcQBYC1hilA6dVo6/GczzEMU4BpKvemOM4+x+nBUAWApW5evf74ufVJ1LDmmT41Vzbn06dhJ8DSN6v2m+t8+jTsBHjs0mrX4o11Pv2IKACcM+wWCOZQAKIpANEUgGgKQDQFIJoCEE0BiKYARFMAoikA0RSAaApANAUgmgIQTQGIdvvh3cub1icBLXx49/LGBCCaAhBNAYimAES7naYvFwOtTwT29JB5E4BoCkC0rwWwDSLF46ybAET7pgCmAKN7mnETgGjPCmAKMKpT2TYBiHayAKYAozmXaROAaGcLYAowiktZvjgBlICju5ZhWyCiXS2AKcBRzcnurAmgBBzN3MzO3gIpAUexJKuLrgGUgN4tzejii2AloFdrsrnqLpAS0Ju1mVx9G1QJ6MWWLG76HEAJaG1rBjd/EKYEtFIie0XD++r1x88ljwenlFx0i34VwjSgttIZqxZY04CSai2u1VdsRWCL2ruK3bYsisASe22nd9+zKwKX7H0d2fSiVRmYprY3T7q7a6MUY+vtTuH/TF/wd82mokMAAAAASUVORK5CYII=">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{
+  --theme:#3B82F6;
+  --theme-d:#2563EB;
+  --ink:#1f2430;
+  --ink-soft:#5b6473;
+  --line:#e6e8ee;
+  --bg:#f4f6fb;
+  --card:#ffffff;
+  --pos:#15803d;
+  --neg:#dc2626;
+  --surface:#f7f8fb;     /* table head / subtle fills */
+  --surface-2:#fafbfc;   /* list items */
+  --pill:#eef1f6;        /* segmented controls */
+  --na-bg:#f6f7f9;       /* disabled cells */
+  --pos-bg:rgba(21,128,61,.09);
+  --neg-bg:rgba(220,38,38,.08);
+  --shadow:0 1px 2px rgba(20,28,46,.04),0 4px 16px rgba(20,28,46,.05);
+  --grid-line:#f0f2f6;   /* chart gridlines */
+}
+body.dark{
+  --ink:#e7eaf0;
+  --ink-soft:#9aa3b2;
+  --line:#2a2f3a;
+  --bg:#11141a;
+  --card:#1a1e26;
+  --pos:#4ade80;
+  --neg:#f87171;
+  --surface:#222732;
+  --surface-2:#1f242e;
+  --pill:#252b36;
+  --na-bg:#20242d;
+  --pos-bg:rgba(74,222,128,.14);
+  --neg-bg:rgba(248,113,113,.14);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.35);
+  --grid-line:#262b35;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{margin:0;padding:0;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  font-size:15px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:84px;
+}
+h1,h2,h3,h4{margin:0;font-weight:700;letter-spacing:.01em;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;font-size:inherit;}
+input,select{font-family:inherit;font-size:16px;color:var(--ink);}
+.hidden{display:none !important;}
+
+/* ---------- top bar ---------- */
+.appbar{
+  position:sticky;top:0;z-index:40;
+  background:var(--card);
+  backdrop-filter:saturate(180%) blur(12px);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--line);
+  padding:14px 18px;
+  display:flex;align-items:center;gap:10px;
+}
+.appbar .brand{display:flex;align-items:center;gap:10px;}
+.appbar .logo{
+  width:30px;height:30px;border-radius:9px;
+  background:linear-gradient(135deg,var(--theme),var(--theme-d));
+  position:relative;flex:0 0 auto;
+}
+.appbar .logo::after{
+  content:"";position:absolute;left:7px;right:7px;bottom:7px;height:3px;border-radius:2px;
+  background:rgba(255,255,255,.9);
+  box-shadow:0 -5px 0 rgba(255,255,255,.55),0 -10px 0 rgba(255,255,255,.3);
+}
+.appbar h1{font-size:16px;}
+.appbar .sub{font-size:11px;color:var(--ink-soft);font-weight:500;letter-spacing:.04em;}
+
+/* ---------- layout ---------- */
+.wrap{max-width:980px;margin:0 auto;padding:18px 16px 40px;}
+.view{display:none;}
+.view.active{display:block;animation:fade .25s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  box-shadow:var(--shadow);padding:18px;margin-bottom:16px;
+}
+.card.tight{padding:14px;}
+.card-h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;}
+.card-h h3{font-size:14px;letter-spacing:.02em;color:var(--ink);}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--theme);}
+
+/* ---------- dashboard ---------- */
+.scope-row{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap;}
+.scope-row label{font-size:12px;color:var(--ink-soft);font-weight:600;}
+.scope-select{
+  flex:1;min-width:140px;padding:10px 12px;border:1px solid var(--line);border-radius:11px;
+  background:var(--card);font-weight:600;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235b6473' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;padding-right:34px;
+}
+.monthnav{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 18px;}
+.monthnav button{
+  width:40px;height:40px;border-radius:50%;border:1px solid var(--line);
+  background:var(--card);font-size:18px;color:var(--theme);display:flex;align-items:center;justify-content:center;
+  transition:.15s;
+}
+.monthnav button:active{transform:scale(.92);}
+.monthnav button:disabled{color:#c4c9d4;border-color:var(--line);opacity:.6;}
+.monthnav .m{font-size:18px;font-weight:700;min-width:140px;text-align:center;}
+
+.total-label{font-size:12px;color:var(--ink-soft);font-weight:600;letter-spacing:.03em;}
+.total-val{font-size:38px;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:2px 0 4px;}
+.total-sub{font-size:12.5px;color:var(--ink-soft);}
+.delta{font-size:14px;font-weight:700;margin-top:8px;display:inline-flex;align-items:center;gap:5px;
+  padding:4px 11px;border-radius:999px;background:var(--surface);}
+.delta.pos{color:var(--pos);background:var(--pos-bg);}
+.delta.neg{color:var(--neg);background:var(--neg-bg);}
+.delta.flat{color:var(--ink-soft);}
+
+.chart-box{position:relative;width:100%;}
+.pie-wrap{display:grid;grid-template-columns:170px 1fr;gap:18px;align-items:center;}
+.pie-canvas-holder{position:relative;height:170px;}
+.legend{display:flex;flex-direction:column;gap:9px;}
+.legend-item{display:flex;align-items:center;gap:9px;font-size:13px;}
+.legend-dot{width:11px;height:11px;border-radius:3px;flex:0 0 auto;}
+.legend-name{font-weight:600;min-width:74px;}
+.legend-amt{margin-left:auto;font-variant-numeric:tabular-nums;font-weight:600;}
+.legend-pct{color:var(--ink-soft);font-size:12px;min-width:52px;text-align:right;font-variant-numeric:tabular-nums;}
+.empty{color:var(--ink-soft);font-size:13px;text-align:center;padding:24px 0;}
+
+.range-tabs{display:inline-flex;background:var(--pill);border-radius:10px;padding:3px;gap:2px;}
+.range-tabs button{padding:6px 14px;border-radius:8px;font-size:12.5px;font-weight:600;color:var(--ink-soft);}
+.range-tabs button.on{background:var(--card);color:var(--theme);box-shadow:0 1px 3px rgba(0,0,0,.08);}
+.seg{display:inline-flex;background:var(--pill);border-radius:11px;padding:3px;gap:2px;}
+.seg button{padding:8px 18px;border-radius:9px;font-size:13px;font-weight:600;color:var(--ink-soft);}
+.seg button.on{background:var(--card);color:var(--theme);box-shadow:0 1px 3px rgba(0,0,0,.08);}
+.stack-legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);}
+.stack-legend .it{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-soft);font-weight:600;}
+.stack-legend .dot{width:10px;height:10px;border-radius:3px;}
+.dirty-bar{display:flex;align-items:center;gap:7px;justify-content:center;font-size:12.5px;font-weight:600;
+  color:var(--accent-ink,#9a6b00);background:var(--dirty-bg,#fff7e6);border:1px solid var(--dirty-line,#f0dca6);
+  border-radius:11px;padding:9px 12px;margin-bottom:10px;}
+.dirty-bar::before{content:"";width:8px;height:8px;border-radius:50%;background:#e0a316;}
+body.dark .dirty-bar{--dirty-bg:#2a2410;--dirty-line:#4a3f17;--accent-ink:#e9c45f;}
+#saveMonth.is-dirty{box-shadow:0 0 0 3px rgba(224,163,22,.25);}
+.line-holder{position:relative;height:230px;margin-top:6px;}
+
+.memo-read{font-size:14px;color:var(--ink);white-space:pre-wrap;line-height:1.7;}
+.memo-read.empty-memo{color:#aab0bd;}
+
+.debt-grid{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;}
+.debt-chip{flex:1;min-width:120px;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:11px 13px;}
+.debt-chip .k{font-size:11px;color:var(--ink-soft);font-weight:600;}
+.debt-chip .v{font-size:17px;font-weight:700;font-variant-numeric:tabular-nums;}
+.debt-chip .v.neg{color:var(--neg);}
+
+/* ---------- generic controls ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:10px 16px;border-radius:11px;font-weight:600;font-size:14px;
+  background:var(--theme);color:#fff;transition:.15s;
+}
+.btn:active{transform:translateY(1px);}
+.btn.ghost{background:var(--pill);color:var(--ink);}
+.btn.line{background:transparent;border:1px solid var(--line);color:var(--ink);}
+.btn.danger{background:var(--neg-bg);color:var(--neg);}
+.btn.sm{padding:7px 12px;font-size:13px;border-radius:9px;}
+.btn.block{width:100%;}
+.btn:disabled{opacity:.45;}
+
+.field{margin-bottom:12px;}
+.field label{display:block;font-size:12px;font-weight:600;color:var(--ink-soft);margin-bottom:5px;}
+.input{
+  width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:11px;background:var(--card);
+}
+.input:focus{outline:none;border-color:var(--theme);box-shadow:0 0 0 3px rgba(59,130,246,.12);}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+
+/* ---------- tables ---------- */
+.tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid var(--line);}
+table{border-collapse:collapse;width:100%;font-size:13.5px;}
+th,td{padding:9px 11px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;}
+th:first-child,td:first-child{text-align:left;}
+thead th{background:var(--surface);font-weight:700;color:var(--ink-soft);font-size:12px;position:sticky;top:0;}
+tbody tr:last-child td{border-bottom:none;}
+.sticky-1{position:sticky;left:0;background:var(--card);z-index:2;}
+thead .sticky-1{background:var(--surface);z-index:3;}
+.cell-amt{
+  width:120px;text-align:right;padding:7px 10px;border:1px solid var(--line);border-radius:8px;
+  font-variant-numeric:tabular-nums;background:var(--card);
+}
+.cell-amt:focus{outline:none;border-color:var(--theme);box-shadow:0 0 0 3px rgba(59,130,246,.12);}
+.na{color:var(--ink-soft);text-align:center;display:inline-block;width:100%;background:var(--na-bg);border-radius:7px;padding:6px 0;}
+.sub-tag{font-size:11px;color:var(--ink-soft);font-weight:500;}
+
+/* ---------- chips / checkboxes ---------- */
+.chk{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:24px;border-radius:7px;border:1px solid var(--line);
+  background:var(--na-bg);color:var(--ink-soft);font-size:13px;font-weight:700;transition:.12s;cursor:pointer;
+}
+.chk.on{background:var(--theme);border-color:var(--theme);color:#fff;}
+.owner-tbl td,.owner-tbl th{text-align:center;padding:7px 8px;}
+.owner-tbl td:first-child,.owner-tbl th:first-child{text-align:left;}
+
+.master-list{display:flex;flex-direction:column;gap:8px;}
+.master-item{display:flex;align-items:center;gap:8px;background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:8px 10px;}
+.master-item .nm{flex:1;font-weight:600;font-size:14px;}
+.icon-btn{width:32px;height:32px;border-radius:8px;border:1px solid var(--line);background:var(--card);
+  display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:15px;}
+.icon-btn:active{background:var(--pill);}
+.icon-btn:disabled{opacity:.35;}
+.icon-btn.del{color:var(--neg);}
+
+.member-row{display:flex;align-items:center;gap:8px;background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:8px 10px;}
+.member-row .nm-input{flex:1;border:1px solid transparent;background:transparent;padding:6px 8px;border-radius:8px;font-weight:600;}
+.member-row .nm-input:focus{outline:none;border-color:var(--theme);background:var(--card);}
+.child-toggle{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--ink-soft);font-weight:600;cursor:pointer;}
+
+.add-row{display:flex;gap:8px;margin-top:10px;}
+.add-row .input{flex:1;}
+
+.tab-pills{display:inline-flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+.tab-pills button{padding:7px 13px;border-radius:9px;font-size:13px;font-weight:600;background:var(--pill);color:var(--ink-soft);}
+.tab-pills button.on{background:var(--theme);color:#fff;}
+
+.note{font-size:12px;color:var(--ink-soft);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:12px;line-height:1.6;}
+
+.color-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.color-swatch{width:46px;height:46px;border-radius:12px;border:1px solid var(--line);padding:0;overflow:hidden;cursor:pointer;}
+.color-swatch::-webkit-color-swatch{border:none;border-radius:11px;}
+.color-swatch::-webkit-color-swatch-wrapper{padding:0;}
+
+/* ---------- bottom tabbar ---------- */
+.tabbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+  display:flex;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0));
+}
+.tabbar button{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 2px;
+  color:#9aa1ae;font-size:10.5px;font-weight:600;border-radius:12px;}
+.tabbar button .ic{font-size:19px;line-height:1;}
+.tabbar button.on{color:var(--theme);}
+
+/* ---------- PIN ---------- */
+.pin-overlay{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:30px;}
+.pin-overlay .logo-lg{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,var(--theme),var(--theme-d));margin-bottom:18px;position:relative;}
+.pin-overlay .logo-lg::after{content:"";position:absolute;left:13px;right:13px;bottom:13px;height:5px;border-radius:3px;background:rgba(255,255,255,.9);box-shadow:0 -9px 0 rgba(255,255,255,.55),0 -18px 0 rgba(255,255,255,.3);}
+.pin-overlay h2{font-size:18px;margin-bottom:4px;}
+.pin-overlay p{color:var(--ink-soft);font-size:13px;margin:0 0 22px;}
+.pin-input{font-size:26px;letter-spacing:14px;text-align:center;width:220px;padding:14px;border:1px solid var(--line);
+  border-radius:14px;background:var(--card);font-variant-numeric:tabular-nums;}
+.pin-input:focus{outline:none;border-color:var(--theme);box-shadow:0 0 0 4px rgba(59,130,246,.14);}
+.pin-err{color:var(--neg);font-size:13px;font-weight:600;margin-top:12px;height:18px;}
+
+/* ---------- toast ---------- */
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(20px);
+  background:var(--ink);color:#fff;padding:11px 18px;border-radius:12px;font-size:13px;font-weight:600;
+  opacity:0;pointer-events:none;transition:.25s;z-index:90;box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ---------- responsive ---------- */
+@media(max-width:680px){
+  body{font-size:14px;}
+  .wrap{padding:14px 12px 30px;}
+  .total-val{font-size:32px;}
+  .pie-wrap{grid-template-columns:1fr;}
+  .pie-canvas-holder{height:190px;max-width:220px;margin:0 auto;}
+  .card{padding:15px;border-radius:14px;}
+  .appbar h1{font-size:15px;}
+
+  /* ---- compact dashboard: fit everything into one screenshot ---- */
+  #view-dash.active{}
+  #view-dash .appbar,.appbar{padding-top:10px;padding-bottom:10px;}
+  body.dash-compact #view-dash .card{padding:12px 13px;margin-bottom:10px;border-radius:13px;}
+  body.dash-compact #view-dash .scope-row{margin-bottom:10px;}
+  body.dash-compact #view-dash .scope-select{padding:8px 30px 8px 11px;}
+  body.dash-compact #view-dash .monthnav{margin:2px 0 10px;gap:14px;}
+  body.dash-compact #view-dash .monthnav button{width:34px;height:34px;font-size:16px;}
+  body.dash-compact #view-dash .monthnav .m{font-size:16px;}
+  body.dash-compact #view-dash .total-val{font-size:27px;margin:0 0 3px;}
+  body.dash-compact #view-dash .total-label{font-size:11px;}
+  body.dash-compact #view-dash .total-sub{font-size:11px;}
+  body.dash-compact #view-dash .delta{margin-top:6px;padding:3px 10px;font-size:13px;}
+  body.dash-compact #view-dash .card-h{margin-bottom:8px;}
+  body.dash-compact #view-dash .card-h h3{font-size:13px;}
+
+  /* pie + legend side by side to save vertical space */
+  body.dash-compact #view-dash .pie-wrap{grid-template-columns:118px 1fr;gap:12px;align-items:center;}
+  body.dash-compact #view-dash .pie-canvas-holder{height:118px;max-width:118px;margin:0;}
+  body.dash-compact #view-dash .legend{gap:5px;}
+  body.dash-compact #view-dash .legend-item{font-size:11.5px;}
+  body.dash-compact #view-dash .legend-name{min-width:56px;}
+  body.dash-compact #view-dash .legend-dot{width:9px;height:9px;}
+  body.dash-compact #view-dash .legend-pct{min-width:44px;font-size:11px;}
+
+  /* shrink trend chart */
+  body.dash-compact #view-dash .line-holder{height:104px;}
+  body.dash-compact #view-dash .range-tabs button{padding:4px 10px;font-size:11.5px;}
+  body.dash-compact #view-dash #trendMode{margin-bottom:6px;}
+  body.dash-compact #view-dash #trendMode button{padding:3px 11px;font-size:11px;}
+  body.dash-compact #view-dash .stack-legend{gap:5px 10px;margin-top:8px;padding-top:8px;}
+  body.dash-compact #view-dash .stack-legend .it{font-size:10.5px;}
+
+  /* clamp memo to a few lines */
+  body.dash-compact #view-dash .memo-read{font-size:12.5px;line-height:1.55;
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+
+  /* debt chips tighter */
+  body.dash-compact #view-dash .debt-chip{padding:8px 10px;}
+  body.dash-compact #view-dash .debt-chip .v{font-size:15px;}
+}
+@media(min-width:681px){
+  .person-picker-mobile{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- PIN overlay -->
+<div id="pinOverlay" class="pin-overlay hidden">
+  <div class="logo-lg"></div>
+  <h2>ロックを解除</h2>
+  <p>6桁のPINを入力してください</p>
+  <input id="pinInput" class="pin-input" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="off" autocorrect="off" autocapitalize="off">
+  <div id="pinErr" class="pin-err"></div>
+</div>
+
+<div class="appbar">
+  <div class="brand">
+    <div class="logo"></div>
+    <div>
+      <h1>資産管理アプリ</h1>
+      <div class="sub">FAMILY ASSETS</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ DASHBOARD ============ -->
+  <section id="view-dash" class="view active">
+    <div class="card">
+      <div class="scope-row">
+        <label for="scopeSel">集計対象</label>
+        <select id="scopeSel" class="scope-select"></select>
+      </div>
+      <div class="monthnav">
+        <button id="mPrev" aria-label="前月">‹</button>
+        <div class="m" id="mLabel">—</div>
+        <button id="mNext" aria-label="次月">›</button>
+      </div>
+      <div id="totalBlock">
+        <div class="total-label" id="totalLabel">総資産</div>
+        <div class="total-val" id="totalVal">¥0</div>
+        <div class="total-sub" id="totalSub"></div>
+        <div id="deltaWrap"></div>
+      </div>
+    </div>
+
+    <div class="card" id="debtCard">
+      <div class="card-h"><h3>負債</h3></div>
+      <div class="debt-grid" id="debtGrid"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><span class="eyebrow">Allocation</span><h3 style="margin-left:auto">資産構成</h3></div>
+      <div id="pieArea"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-h">
+        <h3 id="trendTitle">資産推移</h3>
+        <div class="range-tabs">
+          <button id="rng1y" class="on">直近1年</button>
+          <button id="rngAll">全期間</button>
+        </div>
+      </div>
+      <div class="range-tabs" id="trendMode" style="margin-bottom:10px;">
+        <button id="modeNet" class="on">推移</button>
+        <button id="modeStack">資産クラス別</button>
+      </div>
+      <div id="lineArea"><div class="line-holder"><canvas id="lineCanvas"></canvas></div></div>
+      <div id="stackLegend" class="stack-legend hidden"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3 id="memoTitle">メモ</h3></div>
+      <div id="memoRead" class="memo-read empty-memo">（メモはありません）</div>
+    </div>
+  </section>
+
+  <!-- ============ MONTHLY ============ -->
+  <section id="view-month" class="view">
+    <div class="card">
+      <div class="card-h"><span class="eyebrow">Monthly</span><h3 style="margin-left:auto">対象月</h3></div>
+      <div class="monthnav">
+        <button id="emPrev" aria-label="前月">‹</button>
+        <input id="emMonth" class="input" type="month" style="width:auto;text-align:center;font-weight:700;">
+        <button id="emNext" aria-label="次月">›</button>
+      </div>
+      <div class="row" style="justify-content:center;margin-top:4px;">
+        <select id="savedMonths" class="input" style="flex:1;max-width:200px;"></select>
+        <button class="btn ghost sm" id="loadSel">読込</button>
+        <button class="btn line sm" id="gotoLatest">最新月</button>
+        <button class="btn danger sm" id="delMonth">削除</button>
+      </div>
+    </div>
+
+    <div class="person-picker-mobile card tight" style="display:none;">
+      <div class="field" style="margin:0;">
+        <label>表示する人物（スマホ）</label>
+        <select id="mobilePerson" class="input"></select>
+      </div>
+    </div>
+
+    <div class="card" id="mBankCard">
+      <div class="card-h"><h3>銀行</h3></div>
+      <div class="tbl-scroll"><table id="mBankTbl"></table></div>
+    </div>
+
+    <div class="card" id="mSecCard">
+      <div class="card-h"><h3>証券</h3></div>
+      <div class="tbl-scroll"><table id="mSecTbl"></table></div>
+    </div>
+
+    <div class="card" id="mCryptoCard">
+      <div class="card-h"><h3>暗号資産</h3></div>
+      <div class="tbl-scroll"><table id="mCryptoTbl"></table></div>
+    </div>
+
+    <div class="card" id="mDebtCard">
+      <div class="card-h"><h3>負債</h3></div>
+      <div class="tbl-scroll"><table id="mDebtTbl"></table></div>
+    </div>
+
+    <div class="card">
+      <div class="field" style="margin:0;">
+        <label>この月のメモ</label>
+        <textarea id="mMemo" class="input" rows="3" placeholder="今月の状況や気づきを記録"></textarea>
+      </div>
+    </div>
+
+    <div id="dirtyBar" class="dirty-bar hidden">未保存の変更があります</div>
+    <button class="btn block" id="saveMonth" style="padding:14px;font-size:15px;margin-bottom:8px;">この月を保存</button>
+  </section>
+
+  <!-- ============ SETTINGS ============ -->
+  <section id="view-settings" class="view">
+    <div class="tab-pills" id="setTabs">
+      <button data-s="people" class="on">人物</button>
+      <button data-s="bank">銀行</button>
+      <button data-s="sec">証券</button>
+      <button data-s="sectype">証券区分</button>
+      <button data-s="crypto">暗号資産</button>
+      <button data-s="debt">負債</button>
+      <button data-s="theme">テーマ</button>
+    </div>
+
+    <div id="set-people" class="set-panel">
+      <div class="card">
+        <div class="card-h"><h3>人物</h3></div>
+        <div class="note">「子ども」にチェックした人物は、ダッシュボードの「大人」集計から除外されます。最低2人は必要です。</div>
+        <div class="master-list" id="memberList"></div>
+        <div class="add-row"><input id="newMember" class="input" placeholder="人物名を追加"><button class="btn sm" id="addMember">追加</button></div>
+      </div>
+    </div>
+
+    <div id="set-bank" class="set-panel hidden">
+      <div class="card">
+        <div class="card-h"><h3>銀行マスター</h3></div>
+        <div class="master-list" id="bankList"></div>
+        <div class="add-row"><input id="newBank" class="input" placeholder="銀行名を追加"><button class="btn sm" id="addBank">追加</button></div>
+      </div>
+      <div class="card">
+        <div class="card-h"><h3>口座保有設定</h3></div>
+        <div class="note">人物ごとに、その銀行口座を保有しているかを設定します。</div>
+        <div class="tbl-scroll"><table id="bankOwnTbl" class="owner-tbl"></table></div>
+      </div>
+    </div>
+
+    <div id="set-sec" class="set-panel hidden">
+      <div class="card">
+        <div class="card-h"><h3>証券会社マスター</h3></div>
+        <div class="master-list" id="secList"></div>
+        <div class="add-row"><input id="newSec" class="input" placeholder="証券会社名を追加"><button class="btn sm" id="addSec">追加</button></div>
+      </div>
+      <div class="card">
+        <div class="card-h"><h3>口座保有設定</h3></div>
+        <div class="tbl-scroll"><table id="secOwnTbl" class="owner-tbl"></table></div>
+      </div>
+    </div>
+
+    <div id="set-sectype" class="set-panel hidden">
+      <div class="card">
+        <div class="card-h"><h3>証券区分の表示設定</h3></div>
+        <div class="note">人物を選び、証券口座ごと・区分ごとに入力欄を出すか（ON）／隠すか（OFF）を設定します。OFFの区分は月次入力で「—」になります。</div>
+        <div class="field"><label>対象の人物</label><select id="secTypePerson" class="input"></select></div>
+        <div class="tbl-scroll"><table id="secTypeTbl" class="owner-tbl"></table></div>
+        <button class="btn line sm" id="copySecType" style="margin-top:12px;">この設定を他の全員にコピー</button>
+      </div>
+    </div>
+
+    <div id="set-crypto" class="set-panel hidden">
+      <div class="card">
+        <div class="card-h"><h3>暗号資産口座マスター</h3></div>
+        <div class="master-list" id="cryptoList"></div>
+        <div class="add-row"><input id="newCrypto" class="input" placeholder="取引所名を追加"><button class="btn sm" id="addCrypto">追加</button></div>
+      </div>
+      <div class="card">
+        <div class="card-h"><h3>口座保有設定</h3></div>
+        <div class="tbl-scroll"><table id="cryptoOwnTbl" class="owner-tbl"></table></div>
+      </div>
+    </div>
+
+    <div id="set-debt" class="set-panel hidden">
+      <div class="card">
+        <div class="card-h"><h3>負債マスター</h3></div>
+        <div class="note">負債は任意機能です。1件も登録がなければ、月次・ダッシュボードに負債は表示されません。</div>
+        <div class="master-list" id="debtList"></div>
+        <div class="add-row"><input id="newDebt" class="input" placeholder="負債名を追加（例：住宅ローン）"><button class="btn sm" id="addDebt">追加</button></div>
+      </div>
+      <div class="card" id="debtOwnCard">
+        <div class="card-h"><h3>負担者設定</h3></div>
+        <div class="tbl-scroll"><table id="debtOwnTbl" class="owner-tbl"></table></div>
+      </div>
+    </div>
+
+    <div id="set-theme" class="set-panel hidden">
+      <div class="card">
+        <div class="card-h"><h3>外観モード</h3></div>
+        <div class="note">スクショや夜間に見やすいダークモードを選べます。「自動」は端末の設定に従います。</div>
+        <div class="seg" id="appearanceSeg">
+          <button data-mode="light" class="on">ライト</button>
+          <button data-mode="dark">ダーク</button>
+          <button data-mode="auto">自動</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-h"><h3>テーマカラー</h3></div>
+        <div class="color-row">
+          <input id="colorPicker" class="color-swatch" type="color" value="#3B82F6">
+          <input id="colorHex" class="input" style="width:130px;" maxlength="7" value="#3B82F6">
+          <button class="btn sm" id="saveColor">保存</button>
+          <button class="btn line sm" id="resetColor">初期色に戻す</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BACKUP / PIN ============ -->
+  <section id="view-backup" class="view">
+    <div class="card">
+      <div class="card-h"><span class="eyebrow">Backup</span><h3 style="margin-left:auto">バックアップ</h3></div>
+      <div class="note">すべてのデータをJSONファイルに書き出します。PC・スマホ間の引っ越しに使えます。</div>
+      <button class="btn block" id="exportBtn">JSONを書き出す</button>
+    </div>
+    <div class="card">
+      <div class="card-h"><h3>復元</h3></div>
+      <div class="note">JSONファイルを選ぶと現在のデータを置き換えます。不正なファイルの場合、今のデータは消えません。</div>
+      <input id="importFile" type="file" accept="application/json,.json" style="display:none;">
+      <button class="btn block line" id="importBtn">JSONを読み込む</button>
+    </div>
+    <div class="card">
+      <div class="card-h"><span class="eyebrow">Security</span><h3 style="margin-left:auto">PINロック</h3></div>
+      <div class="note">起動時に6桁PINを要求します。暗号化ではない簡易ロックです。</div>
+      <label class="child-toggle" style="font-size:14px;margin-bottom:12px;">
+        <span id="pinEnableChk" class="chk">✓</span> PINロックを有効にする
+      </label>
+      <div id="pinSetArea" class="hidden">
+        <div class="field"><label>PIN（6桁の数字）</label>
+          <input id="pinSetInput" class="input" type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="6" placeholder="123456"></div>
+        <button class="btn sm" id="savePin">PINを保存</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- bottom tabbar -->
+<nav class="tabbar" id="tabbar">
+  <button data-v="dash" class="on"><span class="ic">◧</span>ダッシュボード</button>
+  <button data-v="month"><span class="ic">✎</span>月次管理</button>
+  <button data-v="settings"><span class="ic">⚙</span>設定</button>
+  <button data-v="backup"><span class="ic">⛃</span>バックアップ</button>
+</nav>
+
+<div id="toast" class="toast"></div>
+
+<script>
+"use strict";
+/* ===========================================================
+   資産管理アプリ  —  single file
+   =========================================================== */
+const LS_KEY = "asset_app_people_v7_fix_resize_keyboard_debt";
+const DEFAULT_THEME = "#3B82F6";
+const SEC_TYPES = ["預り金","日本株","外国株","投資信託（株式）","投資信託（金）"];
+const PIE_CATS = ["現預金","日本株","外国株","投信（株）","投信（金）","暗号資産"];
+
+/* ---------- utilities ---------- */
+function uid(p){return p+"_"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
+function deepClone(o){return JSON.parse(JSON.stringify(o));}
+function clampHex(h){h=(h||"").trim();if(/^#?[0-9a-fA-F]{6}$/.test(h)){return h[0]==="#"?h.toUpperCase():"#"+h.toUpperCase();}return null;}
+function yen(n){n=Math.round(n||0);return "¥"+n.toLocaleString("ja-JP");}
+function signed(n){n=Math.round(n||0);return (n>=0?"+":"-")+Math.abs(n).toLocaleString("ja-JP");}
+function fmtMonthLabel(m){if(!m)return "—";const[y,mo]=m.split("-");return y+"年"+parseInt(mo,10)+"月";}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),1900);}
+
+/* ---------- darken/lighten for shades ---------- */
+function hexToRgb(h){h=h.replace("#","");return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];}
+function rgbToHex(r,g,b){const c=v=>Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,"0");return "#"+c(r)+c(g)+c(b);}
+function hexA(hex,a){const[r,g,b]=hexToRgb(clampHex(hex)||"#3B82F6");return "rgba("+r+","+g+","+b+","+a+")";}
+function mix(hex,target,t){const a=hexToRgb(hex),b=hexToRgb(target);return rgbToHex(a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t);}
+/* produce n distinguishable shades from theme color */
+function shades(hex,n){
+  if(n<=0)return [];
+  const dark = (typeof document!=="undefined") && document.body && document.body.classList.contains("dark");
+  const out=[];
+  for(let i=0;i<n;i++){
+    const t = n===1?0:(i/(n-1)); // 0..1
+    if(dark){
+      // on dark bg: span from base color (light end) toward lighter tints, keep all bright enough
+      // lighter for low t, slightly deeper but never near-black for high t
+      if(t<0.5){ out.push(mix(hex,"#ffffff",(0.5-t)*1.1)); }
+      else{ out.push(mix(hex,"#0b0e14",(t-0.5)*0.45)); }
+    }else{
+      if(t<0.5){ out.push(mix(hex,"#ffffff",(0.5-t)*0.9)); }
+      else{ out.push(mix(hex,"#000000",(t-0.5)*0.8)); }
+    }
+  }
+  return out;
+}
+
+let state=null;
+let charts={pie:null,line:null};
+let ui={tab:"dash",dashMonth:null,emMonth:null,range:"1y",trendMode:"net",setPanel:"people",scope:"all",pendingPinAction:null,dirty:false};
+
+/* ===========================================================
+   STATE: load / migrate / save
+   =========================================================== */
+function defaultState(){
+  const members=[
+    {id:"person1",name:"父",isChild:false},
+    {id:"person2",name:"母",isChild:false},
+    {id:"person3",name:"子1",isChild:true},
+    {id:"person4",name:"子2",isChild:true},
+  ];
+  const ownership={bank:{},sec:{},crypto:{},debt:{}};
+  members.forEach(m=>{ownership.bank[m.id]=[];ownership.sec[m.id]=[];ownership.crypto[m.id]=[];ownership.debt[m.id]=[];});
+  return {
+    settings:{pinEnabled:false,pin:"",themeColor:DEFAULT_THEME,appearance:"light",mobilePersonId:"person1",secTypePersonId:"person1"},
+    members,
+    masters:{bank:[],sec:[],crypto:[],debt:[]},
+    ownership,
+    secTypes:SEC_TYPES.slice(),
+    secTypeEnabledByAccount:{},
+    secTypeEnabledByPersonAccount:{},
+    data:{}
+  };
+}
+
+/* fill any missing structure so old / partial data never breaks the app */
+function migrate(s){
+  const d=defaultState();
+  if(!s||typeof s!=="object") return d;
+  s.settings = Object.assign({},d.settings,s.settings||{});
+  if(!clampHex(s.settings.themeColor)) s.settings.themeColor=DEFAULT_THEME;
+  if(!Array.isArray(s.members)||s.members.length<1){ s.members=d.members; }
+  s.members.forEach(m=>{ if(typeof m.isChild!=="boolean") m.isChild=false; if(!m.id) m.id=uid("person"); if(!m.name) m.name="名称未設定"; });
+  s.masters=Object.assign({bank:[],sec:[],crypto:[],debt:[]},s.masters||{});
+  ["bank","sec","crypto","debt"].forEach(k=>{ if(!Array.isArray(s.masters[k])) s.masters[k]=[]; });
+  s.ownership=s.ownership||{};
+  ["bank","sec","crypto","debt"].forEach(k=>{
+    s.ownership[k]=s.ownership[k]||{};
+    s.members.forEach(m=>{ if(!Array.isArray(s.ownership[k][m.id])) s.ownership[k][m.id]=[]; });
+  });
+  if(!Array.isArray(s.secTypes)||!s.secTypes.length) s.secTypes=SEC_TYPES.slice();
+  s.secTypeEnabledByAccount=s.secTypeEnabledByAccount||{};
+  s.secTypeEnabledByPersonAccount=s.secTypeEnabledByPersonAccount||{};
+  s.data=s.data||{};
+  Object.keys(s.data).forEach(mk=>{
+    const mo=s.data[mk]||{};
+    if(typeof mo.memo!=="string") mo.memo="";
+    mo.byMember=mo.byMember||{};
+    s.members.forEach(m=>{
+      mo.byMember[m.id]=mo.byMember[m.id]||{};
+      const bm=mo.byMember[m.id];
+      bm.bank=bm.bank||{}; bm.sec=bm.sec||{}; bm.crypto=bm.crypto||{}; bm.debt=bm.debt||{};
+      bm.sec=normalizeSec(bm.sec);
+    });
+    s.data[mk]=mo;
+  });
+  return s;
+}
+
+/* securities may arrive nested {account:{type:value}} (older exports) or
+   flat {"account||type":value} (this app). Always store flat internally. */
+function normalizeSec(sec){
+  if(!sec||typeof sec!=="object") return {};
+  const out={};
+  for(const k in sec){
+    const v=sec[k];
+    if(v&&typeof v==="object"){
+      for(const type in v){ const n=Number(v[type])||0; if(n) out[k+"||"+type]=n; }
+    }else{
+      const n=Number(v)||0; if(n) out[k]=n;
+    }
+  }
+  return out;
+}
+
+function load(){
+  let raw=null;
+  try{ raw=localStorage.getItem(LS_KEY); }catch(e){ raw=null; }
+  if(!raw){ return defaultState(); }
+  try{ return migrate(JSON.parse(raw)); }
+  catch(e){ console.warn("parse failed, using default",e); return defaultState(); }
+}
+function save(){
+  try{ localStorage.setItem(LS_KEY,JSON.stringify(state)); }
+  catch(e){ console.warn("save failed",e); toast("保存に失敗しました"); }
+}
+
+/* ===========================================================
+   THEME
+   =========================================================== */
+function applyTheme(){
+  const c=clampHex(state.settings.themeColor)||DEFAULT_THEME;
+  document.documentElement.style.setProperty("--theme",c);
+  document.documentElement.style.setProperty("--theme-d",mix(c,"#000000",0.18));
+  applyAppearance();
+}
+function prefersDark(){ try{ return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches; }catch(e){ return false; } }
+function isDark(){
+  const m=state.settings.appearance||"light";
+  return m==="dark" || (m==="auto" && prefersDark());
+}
+function applyAppearance(){
+  const dark=isDark();
+  document.body.classList.toggle("dark",dark);
+  const meta=document.querySelector('meta[name="theme-color"]');
+  if(meta) meta.setAttribute("content", dark? "#11141a" : (clampHex(state.settings.themeColor)||DEFAULT_THEME));
+  // charts pick up theme via re-render; refresh if on dashboard
+  if(ui&&ui.tab==="dash"&&state&&latestMonth()) { /* re-render handled by caller */ }
+}
+
+/* ===========================================================
+   MONTH HELPERS
+   =========================================================== */
+function monthHasInput(mk){
+  const mo=state.data[mk]; if(!mo) return false;
+  if(mo.memo && mo.memo.trim()) return true;
+  const bm=mo.byMember||{};
+  for(const pid in bm){
+    const p=bm[pid];
+    for(const grp of ["bank","sec","crypto","debt"]){
+      const g=p[grp]||{};
+      for(const k in g){ if(Number(g[k])>0) return true; }
+    }
+  }
+  return false;
+}
+function inputMonths(){ return Object.keys(state.data).filter(monthHasInput).sort(); }
+function latestMonth(){ const a=inputMonths(); return a.length?a[a.length-1]:null; }
+function prevInputMonth(mk){ const a=inputMonths(); const i=a.indexOf(mk); return i>0?a[i-1]:null; }
+
+/* members included in current scope */
+function scopeMembers(){
+  const sc=ui.scope;
+  if(sc==="all") return state.members.map(m=>m.id);
+  if(sc==="adult") return state.members.filter(m=>!m.isChild).map(m=>m.id);
+  if(sc==="child") return state.members.filter(m=>m.isChild).map(m=>m.id);
+  if(sc.startsWith("p:")){ const id=sc.slice(2); return state.members.some(m=>m.id===id)?[id]:[]; }
+  return state.members.map(m=>m.id);
+}
+
+/* ===========================================================
+   AGGREGATION
+   =========================================================== */
+/* assets for a member in a month, broken into pie categories */
+function memberAssetBreakdown(mk,pid){
+  const out={"現預金":0,"日本株":0,"外国株":0,"投信（株）":0,"投信（金）":0,"暗号資産":0};
+  const mo=state.data[mk]; if(!mo) return out;
+  const bm=(mo.byMember||{})[pid]; if(!bm) return out;
+  // bank -> 現預金
+  for(const k in (bm.bank||{})) out["現預金"]+=Number(bm.bank[k])||0;
+  // sec: key = accId||type
+  for(const k in (bm.sec||{})){
+    const v=Number(bm.sec[k])||0; if(!v) continue;
+    const type=k.split("||")[1]||"";
+    if(type==="預り金") out["現預金"]+=v;
+    else if(type==="日本株") out["日本株"]+=v;
+    else if(type==="外国株") out["外国株"]+=v;
+    else if(type==="投資信託（株式）") out["投信（株）"]+=v;
+    else if(type==="投資信託（金）") out["投信（金）"]+=v;
+  }
+  // crypto
+  for(const k in (bm.crypto||{})) out["暗号資産"]+=Number(bm.crypto[k])||0;
+  return out;
+}
+function memberDebt(mk,pid){
+  const mo=state.data[mk]; if(!mo) return 0;
+  const bm=(mo.byMember||{})[pid]; if(!bm) return 0;
+  let s=0; for(const k in (bm.debt||{})) s+=Number(bm.debt[k])||0; return s;
+}
+/* scope totals for a month */
+function scopeBreakdown(mk){
+  const ids=scopeMembers();
+  const out={"現預金":0,"日本株":0,"外国株":0,"投信（株）":0,"投信（金）":0,"暗号資産":0};
+  ids.forEach(pid=>{ const b=memberAssetBreakdown(mk,pid); for(const k in out) out[k]+=b[k]; });
+  return out;
+}
+function scopeAssetTotal(mk){ const b=scopeBreakdown(mk); let s=0; for(const k in b) s+=b[k]; return s; }
+function scopeDebtTotal(mk){ const ids=scopeMembers(); let s=0; ids.forEach(pid=>s+=memberDebt(mk,pid)); return s; }
+function scopeHasDebtMaster(){ return state.masters.debt.length>0; }
+/* whether any debt value ever entered within scope (any month) */
+function scopeDebtEverEntered(){
+  if(!scopeHasDebtMaster()) return false;
+  const ids=scopeMembers();
+  for(const mk in state.data){
+    for(const pid of ids){ if(memberDebt(mk,pid)>0) return true; }
+  }
+  return false;
+}
+function scopeNetWorth(mk){ return scopeAssetTotal(mk)-scopeDebtTotal(mk); }
+function useNet(){ return scopeDebtEverEntered(); }
+
+
+/* ===========================================================
+   sec-type enabled resolution (person x account x type)
+   priority: person>account>type  ->  account>type  ->  ON
+   =========================================================== */
+function secTypeEnabled(pid,accName,type){
+  const pa=state.secTypeEnabledByPersonAccount;
+  if(pa[pid]&&pa[pid][accName]&&typeof pa[pid][accName][type]==="boolean") return pa[pid][accName][type];
+  const ba=state.secTypeEnabledByAccount;
+  if(ba[accName]&&typeof ba[accName][type]==="boolean") return ba[accName][type];
+  return true;
+}
+function setSecTypeEnabled(pid,accName,type,val){
+  const pa=state.secTypeEnabledByPersonAccount;
+  pa[pid]=pa[pid]||{}; pa[pid][accName]=pa[pid][accName]||{}; pa[pid][accName][type]=val;
+}
+function owns(group,pid,name){ return (state.ownership[group][pid]||[]).includes(name); }
+function setOwn(group,pid,name,val){
+  const arr=state.ownership[group][pid]||(state.ownership[group][pid]=[]);
+  const i=arr.indexOf(name);
+  if(val&&i<0) arr.push(name);
+  if(!val&&i>=0) arr.splice(i,1);
+}
+
+/* ===========================================================
+   DASHBOARD RENDER
+   =========================================================== */
+function buildScopeSelect(){
+  const sel=document.getElementById("scopeSel");
+  const cur=ui.scope;
+  let html='<option value="all">全員</option><option value="adult">大人</option><option value="child">子ども</option>';
+  state.members.forEach(m=>{ html+='<option value="p:'+m.id+'">'+escapeHtml(m.name)+'</option>'; });
+  sel.innerHTML=html;
+  // validate current scope still exists
+  if(cur.startsWith("p:")&&!state.members.some(m=>"p:"+m.id===cur)) ui.scope="all";
+  sel.value=ui.scope;
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+
+function renderDashboard(){
+  document.body.classList.toggle("dash-compact",isMobile());
+  buildScopeSelect();
+  const months=inputMonths();
+  // clamp dashMonth
+  if(!ui.dashMonth || !months.includes(ui.dashMonth)){ ui.dashMonth=latestMonth(); }
+  const mk=ui.dashMonth;
+  document.getElementById("mLabel").textContent=fmtMonthLabel(mk);
+
+  // month nav enable/disable
+  const idx=months.indexOf(mk);
+  document.getElementById("mPrev").disabled=(idx<=0);
+  document.getElementById("mNext").disabled=(idx<0||idx>=months.length-1);
+
+  if(!mk){
+    document.getElementById("totalLabel").textContent="総資産";
+    document.getElementById("totalVal").textContent="¥0";
+    document.getElementById("totalSub").textContent="";
+    document.getElementById("deltaWrap").innerHTML="";
+    document.getElementById("debtCard").classList.add("hidden");
+    document.getElementById("pieArea").innerHTML='<div class="empty">まだデータがありません。「月次管理」から入力してください。</div>';
+    document.getElementById("lineArea").innerHTML='<div class="empty">推移を表示するデータがありません。</div>';
+    document.getElementById("memoTitle").textContent="メモ";
+    setMemoRead("");
+    destroyCharts();
+    return;
+  }
+
+  const net=useNet();
+  const assets=scopeAssetTotal(mk);
+  const debt=scopeDebtTotal(mk);
+  document.getElementById("totalLabel").textContent= net?"純資産（資産−負債）":"総資産";
+  document.getElementById("totalVal").textContent= yen(net?assets-debt:assets);
+  document.getElementById("totalSub").textContent= net? ("資産合計 "+yen(assets)+" ／ 負債合計 "+yen(debt)) : "";
+
+  // delta vs previous input month
+  const pmk=prevInputMonth(mk);
+  const dw=document.getElementById("deltaWrap");
+  if(!pmk){ dw.innerHTML='<span class="delta flat">前月データなし</span>'; }
+  else{
+    const cur= net? assets-debt : assets;
+    const prevNet= net;
+    const prv= prevNet? (scopeAssetTotal(pmk)-scopeDebtTotal(pmk)) : scopeAssetTotal(pmk);
+    const diff=cur-prv;
+    const cls= diff>0?"pos":(diff<0?"neg":"flat");
+    dw.innerHTML='<span class="delta '+cls+'">前月比 '+signed(diff)+'</span>';
+  }
+
+  renderDebtCard(mk,net,debt);
+  renderPie(mk);
+  renderLine();
+  // memo
+  document.getElementById("memoTitle").textContent=fmtMonthLabel(mk)+"のメモ";
+  setMemoRead((state.data[mk]&&state.data[mk].memo)||"");
+}
+
+function setMemoRead(txt){
+  const el=document.getElementById("memoRead");
+  if(txt&&txt.trim()){ el.textContent=txt; el.classList.remove("empty-memo"); }
+  else{ el.textContent="（メモはありません）"; el.classList.add("empty-memo"); }
+}
+
+function renderDebtCard(mk,net,debt){
+  const card=document.getElementById("debtCard");
+  if(!scopeDebtEverEntered()){ card.classList.add("hidden"); return; }
+  card.classList.remove("hidden");
+  const assets=scopeAssetTotal(mk);
+  document.getElementById("debtGrid").innerHTML=
+    '<div class="debt-chip"><div class="k">資産合計</div><div class="v">'+yen(assets)+'</div></div>'+
+    '<div class="debt-chip"><div class="k">負債合計</div><div class="v neg">'+yen(debt)+'</div></div>'+
+    '<div class="debt-chip"><div class="k">純資産</div><div class="v">'+yen(assets-debt)+'</div></div>';
+}
+
+function renderPie(mk){
+  const area=document.getElementById("pieArea");
+  const bd=scopeBreakdown(mk);
+  const entries=PIE_CATS.map(c=>({name:c,val:bd[c]})).filter(e=>e.val>0);
+  if(!entries.length){
+    area.innerHTML='<div class="empty">この月の資産データがありません。</div>';
+    if(charts.pie){charts.pie.destroy();charts.pie=null;}
+    return;
+  }
+  const total=entries.reduce((s,e)=>s+e.val,0);
+  const cols=shades(clampHex(state.settings.themeColor)||DEFAULT_THEME,entries.length);
+  // build structure once
+  area.innerHTML=
+    '<div class="pie-wrap"><div class="pie-canvas-holder"><canvas id="pieCanvas"></canvas></div>'+
+    '<div class="legend" id="pieLegend"></div></div>';
+  const leg=document.getElementById("pieLegend");
+  leg.innerHTML=entries.map((e,i)=>{
+    const pct=(e.val/total*100).toFixed(1);
+    return '<div class="legend-item"><span class="legend-dot" style="background:'+cols[i]+'"></span>'+
+      '<span class="legend-name">'+escapeHtml(e.name)+'</span>'+
+      '<span class="legend-amt">'+yen(e.val)+'</span>'+
+      '<span class="legend-pct">'+pct+'%</span></div>';
+  }).join("");
+
+  if(charts.pie){charts.pie.destroy();charts.pie=null;}
+  const makePie=()=>{
+    const cv=document.getElementById("pieCanvas");
+    const holder=cv?cv.parentElement:null;
+    if(!cv||!holder) return;
+    const w=holder.clientWidth||170, h=holder.clientHeight||170;
+    cv.style.width=w+"px"; cv.style.height=h+"px";
+    cv.width=w; cv.height=h;
+    const pieBorder=(getComputedStyle(document.body).getPropertyValue("--card")||"#fff").trim();
+    charts.pie=new Chart(cv.getContext("2d"),{
+      type:"doughnut",
+      data:{labels:entries.map(e=>e.name),datasets:[{data:entries.map(e=>e.val),backgroundColor:cols,borderWidth:2,borderColor:pieBorder}]},
+      options:{responsive:false,maintainAspectRatio:false,cutout:"62%",animation:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>" "+c.label+"  "+yen(c.parsed)}}}}
+    });
+  };
+  requestAnimationFrame(makePie);
+}
+
+function chartColors(){
+  const cs=getComputedStyle(document.body);
+  return {
+    grid:(cs.getPropertyValue("--grid-line")||"#f0f2f6").trim(),
+    tick:(cs.getPropertyValue("--ink-soft")||"#5b6473").trim(),
+    pointBorder:(cs.getPropertyValue("--card")||"#fff").trim()
+  };
+}
+function renderLine(){
+  const area=document.getElementById("lineArea");
+  const stackLegend=document.getElementById("stackLegend");
+  let months=inputMonths();
+  const dm=ui.dashMonth;
+  if(dm){ const di=months.indexOf(dm); if(di>=0) months=months.slice(0,di+1); }
+  if(ui.range==="1y"){ months=months.slice(-12); }
+  if(!months.length){ area.innerHTML='<div class="empty">推移を表示するデータがありません。</div>'; stackLegend.classList.add("hidden"); if(charts.line){charts.line.destroy();charts.line=null;} return; }
+  area.innerHTML='<div class="line-holder"><canvas id="lineCanvas"></canvas></div>';
+  const labels=months.map(m=>{const[y,mo]=m.split("-");return y.slice(2)+"/"+parseInt(mo,10);});
+  const c=clampHex(state.settings.themeColor)||DEFAULT_THEME;
+  if(charts.line){charts.line.destroy();charts.line=null;}
+
+  const stackMode=(ui.trendMode==="stack");
+  // build per-category series if stacked
+  const cols=shades(c,PIE_CATS.length);
+  let datasets;
+  if(stackMode){
+    datasets=PIE_CATS.map((cat,i)=>({
+      label:cat,
+      data:months.map(m=>scopeBreakdown(m)[cat]||0),
+      backgroundColor:hexA(cols[i],.85),
+      borderColor:cols[i],borderWidth:1,fill:true,tension:.25,pointRadius:0,stack:"a"
+    }));
+    stackLegend.innerHTML=PIE_CATS.map((cat,i)=>'<span class="it"><span class="dot" style="background:'+cols[i]+'"></span>'+escapeHtml(cat)+'</span>').join("");
+    stackLegend.classList.remove("hidden");
+  }else{
+    const net=useNet();
+    const vals=months.map(m=> net? (scopeAssetTotal(m)-scopeDebtTotal(m)) : scopeAssetTotal(m));
+    datasets=[{data:vals,_grad:true,borderColor:c,borderWidth:2.5,fill:true,
+      tension:.3,pointRadius:3,pointBackgroundColor:c,pointBorderWidth:1.5}];
+    stackLegend.classList.add("hidden");
+  }
+
+  const makeLine=()=>{
+    const cv=document.getElementById("lineCanvas");
+    const holder=cv?cv.parentElement:null;
+    if(!cv||!holder) return;
+    const w=holder.clientWidth||300, h=holder.clientHeight||200;
+    cv.style.width=w+"px"; cv.style.height=h+"px";
+    cv.width=w; cv.height=h;
+    const ctx=cv.getContext("2d");
+    const cc=chartColors();
+    // gradient for net-mode line
+    datasets.forEach(ds=>{
+      if(ds._grad){
+        const grad=ctx.createLinearGradient(0,0,0,h);
+        grad.addColorStop(0,hexA(c,.30)); grad.addColorStop(1,hexA(c,0));
+        ds.backgroundColor=grad; ds.pointBorderColor=cc.pointBorder; delete ds._grad;
+      }
+    });
+    charts.line=new Chart(ctx,{
+      type:"line",
+      data:{labels,datasets},
+      options:{responsive:false,maintainAspectRatio:false,animation:false,
+        interaction:{mode:"index",intersect:false},
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:c2=>" "+(c2.dataset.label?c2.dataset.label+": ":"")+yen(c2.parsed.y)}}},
+        scales:{
+          y:{stacked:stackMode,ticks:{callback:v=>"¥"+(v/10000).toLocaleString()+"万",font:{size:10},color:cc.tick},grid:{color:cc.grid}},
+          x:{stacked:stackMode,grid:{display:false},ticks:{font:{size:10},color:cc.tick}}
+        }}
+    });
+  };
+  requestAnimationFrame(makeLine);
+}
+function destroyCharts(){ if(charts.pie){charts.pie.destroy();charts.pie=null;} if(charts.line){charts.line.destroy();charts.line=null;} }
+
+
+/* ===========================================================
+   AMOUNT INPUT helpers (comma format / numeric keyboard)
+   =========================================================== */
+function fmtComma(n){ n=Math.round(Number(n)||0); return n===0?"":n.toLocaleString("ja-JP"); }
+function parseAmt(s){ return Math.max(0,Math.round(Number(String(s).replace(/[^0-9.-]/g,""))||0)); }
+
+/* attach behaviour to one amount input. group: bank/sec/crypto/debt, key, pid */
+function makeAmtInput(pid,group,key,val){
+  const inp=document.createElement("input");
+  inp.className="cell-amt";
+  inp.type="tel"; inp.inputMode="numeric"; inp.setAttribute("pattern","[0-9]*");
+  inp.value=fmtComma(val);
+  inp.dataset.raw=String(val||0);
+  if(inp.dataset.bound!=="1"){
+    inp.dataset.bound="1";
+    inp.addEventListener("focus",()=>{
+      const raw=parseAmt(inp.value); inp.value= raw===0?"":String(raw);
+      if(!isMobile()) { try{inp.select();}catch(e){} }
+    });
+    inp.addEventListener("blur",()=>{
+      const raw=parseAmt(inp.value);
+      const prev=Number(inp.dataset.raw)||0;
+      ensureMonthCell(ui.emMonth,pid,group)[key]=raw;
+      inp.value=fmtComma(raw);
+      inp.dataset.raw=String(raw);
+      if(raw!==prev) markDirty();
+    });
+    inp.addEventListener("keydown",e=>{
+      if(e.key==="Enter"){ e.preventDefault(); focusNextAmt(inp); }
+    });
+  }
+  return inp;
+}
+function ensureMonthCell(mk,pid,group){
+  state.data[mk]=state.data[mk]||{memo:"",byMember:{}};
+  const mo=state.data[mk]; mo.byMember=mo.byMember||{};
+  mo.byMember[pid]=mo.byMember[pid]||{bank:{},sec:{},crypto:{},debt:{}};
+  mo.byMember[pid][group]=mo.byMember[pid][group]||{};
+  return mo.byMember[pid][group];
+}
+function getCell(mk,pid,group,key){
+  const mo=state.data[mk]; if(!mo||!mo.byMember||!mo.byMember[pid]) return 0;
+  const g=mo.byMember[pid][group]; if(!g) return 0; return Number(g[key])||0;
+}
+function focusNextAmt(cur){
+  const all=Array.from(document.querySelectorAll("#view-month .cell-amt"));
+  const i=all.indexOf(cur);
+  if(i>=0&&i<all.length-1){ all[i+1].focus(); }
+  else cur.blur();
+}
+function isMobile(){ return window.innerWidth<=680; }
+
+/* visible members on monthly view (mobile=1 person) */
+function monthlyPersons(){
+  if(isMobile()){
+    let id=state.settings.mobilePersonId;
+    if(!state.members.some(m=>m.id===id)){ id=state.members[0].id; state.settings.mobilePersonId=id; }
+    return [state.members.find(m=>m.id===id)];
+  }
+  return state.members.slice();
+}
+
+/* ===========================================================
+   MONTHLY VIEW RENDER
+   =========================================================== */
+function renderMonthly(){
+  // saved months dropdown
+  const sm=document.getElementById("savedMonths");
+  const months=inputMonths();
+  sm.innerHTML = months.length? months.map(m=>'<option value="'+m+'">'+fmtMonthLabel(m)+'</option>').join("") : '<option value="">（保存済みなし）</option>';
+  if(!ui.emMonth){ ui.emMonth=latestMonth()|| new Date().toISOString().slice(0,7); }
+  document.getElementById("emMonth").value=ui.emMonth;
+  if(months.includes(ui.emMonth)) sm.value=ui.emMonth;
+
+  // mobile person picker
+  const picker=document.querySelector(".person-picker-mobile");
+  const mp=document.getElementById("mobilePerson");
+  mp.innerHTML=state.members.map(m=>'<option value="'+m.id+'">'+escapeHtml(m.name)+'</option>').join("");
+  if(!state.members.some(m=>m.id===state.settings.mobilePersonId)) state.settings.mobilePersonId=state.members[0].id;
+  mp.value=state.settings.mobilePersonId;
+  picker.style.display=isMobile()?"block":"none";
+
+  const persons=monthlyPersons();
+
+  renderBankTable(persons);
+  renderSecTable(persons);
+  renderCryptoTable(persons);
+  renderDebtTable(persons);
+
+  document.getElementById("mMemo").value=(state.data[ui.emMonth]&&state.data[ui.emMonth].memo)||"";
+
+  // hide debt card if no debt master
+  document.getElementById("mDebtCard").classList.toggle("hidden",state.masters.debt.length===0);
+  document.getElementById("mBankCard").classList.toggle("hidden",state.masters.bank.length===0);
+  document.getElementById("mSecCard").classList.toggle("hidden",state.masters.sec.length===0);
+  document.getElementById("mCryptoCard").classList.toggle("hidden",state.masters.crypto.length===0);
+  updateDirtyUI();
+}
+
+function headRow(persons,first){
+  let h="<thead><tr><th class='sticky-1'>"+first+"</th>";
+  persons.forEach(p=>h+="<th>"+escapeHtml(p.name)+"</th>");
+  return h+"</tr></thead>";
+}
+function naCell(){ return "<td><span class='na'>—</span></td>"; }
+
+function renderBankTable(persons){
+  const tbl=document.getElementById("mBankTbl");
+  if(!state.masters.bank.length){ tbl.innerHTML=""; return; }
+  let html=headRow(persons,"銀行")+"<tbody>";
+  state.masters.bank.forEach(bank=>{
+    html+="<tr><td class='sticky-1'>"+escapeHtml(bank)+"</td>";
+    persons.forEach(p=>{
+      if(owns("bank",p.id,bank)) html+="<td data-pid='"+p.id+"' data-bank='"+escapeHtml(bank)+"'></td>";
+      else html+=naCell();
+    });
+    html+="</tr>";
+  });
+  tbl.innerHTML=html+"</tbody>";
+  tbl.querySelectorAll("td[data-bank]").forEach(td=>{
+    const pid=td.dataset.pid,bank=td.getAttribute("data-bank");
+    td.appendChild(makeAmtInput(pid,"bank",bank,getCell(ui.emMonth,pid,"bank",bank)));
+  });
+}
+
+function renderSecTable(persons){
+  const tbl=document.getElementById("mSecTbl");
+  if(!state.masters.sec.length){ tbl.innerHTML=""; return; }
+  // rows = account x type ; show row if any visible person owns account AND type enabled
+  let html="<thead><tr><th class='sticky-1'>証券口座</th><th>区分</th>";
+  persons.forEach(p=>html+="<th>"+escapeHtml(p.name)+"</th>");
+  html+="</tr></thead><tbody>";
+  state.masters.sec.forEach(acc=>{
+    state.secTypes.forEach(type=>{
+      // does any visible person need this row?
+      const anyEnabled=persons.some(p=>owns("sec",p.id,acc)&&secTypeEnabled(p.id,acc,type));
+      if(isMobile()&&!anyEnabled) return; // hide row entirely on mobile single-person
+      if(!persons.some(p=>owns("sec",p.id,acc))) return; // no visible owner at all
+      const key=acc+"||"+type;
+      html+="<tr><td class='sticky-1'>"+escapeHtml(acc)+"</td><td class='sub-tag'>"+escapeHtml(type)+"</td>";
+      persons.forEach(p=>{
+        if(owns("sec",p.id,acc)&&secTypeEnabled(p.id,acc,type))
+          html+="<td data-pid='"+p.id+"' data-key='"+escapeHtml(key)+"'></td>";
+        else html+=naCell();
+      });
+      html+="</tr>";
+    });
+  });
+  tbl.innerHTML=html+"</tbody>";
+  tbl.querySelectorAll("td[data-key]").forEach(td=>{
+    const pid=td.dataset.pid,key=td.getAttribute("data-key");
+    td.appendChild(makeAmtInput(pid,"sec",key,getCell(ui.emMonth,pid,"sec",key)));
+  });
+}
+
+function renderCryptoTable(persons){
+  const tbl=document.getElementById("mCryptoTbl");
+  if(!state.masters.crypto.length){ tbl.innerHTML=""; return; }
+  let html=headRow(persons,"暗号資産口座")+"<tbody>";
+  state.masters.crypto.forEach(acc=>{
+    html+="<tr><td class='sticky-1'>"+escapeHtml(acc)+"</td>";
+    persons.forEach(p=>{
+      if(owns("crypto",p.id,acc)) html+="<td data-pid='"+p.id+"' data-acc='"+escapeHtml(acc)+"'></td>";
+      else html+=naCell();
+    });
+    html+="</tr>";
+  });
+  tbl.innerHTML=html+"</tbody>";
+  tbl.querySelectorAll("td[data-acc]").forEach(td=>{
+    const pid=td.dataset.pid,acc=td.getAttribute("data-acc");
+    td.appendChild(makeAmtInput(pid,"crypto",acc,getCell(ui.emMonth,pid,"crypto",acc)));
+  });
+}
+
+function renderDebtTable(persons){
+  const tbl=document.getElementById("mDebtTbl");
+  if(!state.masters.debt.length){ tbl.innerHTML=""; return; }
+  let html=headRow(persons,"負債")+"<tbody>";
+  state.masters.debt.forEach(d=>{
+    html+="<tr><td class='sticky-1'>"+escapeHtml(d)+"</td>";
+    persons.forEach(p=>{
+      if(owns("debt",p.id,d)) html+="<td data-pid='"+p.id+"' data-debt='"+escapeHtml(d)+"'></td>";
+      else html+=naCell();
+    });
+    html+="</tr>";
+  });
+  tbl.innerHTML=html+"</tbody>";
+  tbl.querySelectorAll("td[data-debt]").forEach(td=>{
+    const pid=td.dataset.pid,d=td.getAttribute("data-debt");
+    td.appendChild(makeAmtInput(pid,"debt",d,getCell(ui.emMonth,pid,"debt",d)));
+  });
+}
+
+
+/* ===========================================================
+   SETTINGS RENDER
+   =========================================================== */
+function renderSettings(){
+  renderMembers();
+  renderMasterList("bank","bankList");
+  renderMasterList("sec","secList");
+  renderMasterList("crypto","cryptoList");
+  renderMasterList("debt","debtList");
+  renderOwnerTable("bank","bankOwnTbl");
+  renderOwnerTable("sec","secOwnTbl");
+  renderOwnerTable("crypto","cryptoOwnTbl");
+  renderOwnerTable("debt","debtOwnTbl");
+  renderSecTypeSettings();
+  document.getElementById("debtOwnCard").classList.toggle("hidden",state.masters.debt.length===0);
+  // theme inputs
+  const c=clampHex(state.settings.themeColor)||DEFAULT_THEME;
+  document.getElementById("colorPicker").value=c;
+  document.getElementById("colorHex").value=c;
+  renderAppearanceSeg();
+}
+function renderAppearanceSeg(){
+  const mode=state.settings.appearance||"light";
+  document.querySelectorAll("#appearanceSeg button").forEach(b=>b.classList.toggle("on",b.dataset.mode===mode));
+}
+
+function renderMembers(){
+  const box=document.getElementById("memberList");
+  box.innerHTML="";
+  state.members.forEach((m,i)=>{
+    const row=document.createElement("div"); row.className="member-row";
+    row.innerHTML=
+      '<input class="nm-input" value="'+escapeHtml(m.name)+'">'+
+      '<label class="child-toggle"><span class="chk '+(m.isChild?"on":"")+'">'+(m.isChild?"✓":"")+'</span>子ども</label>'+
+      '<button class="icon-btn" data-up '+(i===0?"disabled":"")+'>↑</button>'+
+      '<button class="icon-btn" data-down '+(i===state.members.length-1?"disabled":"")+'>↓</button>'+
+      '<button class="icon-btn del" data-del '+(state.members.length<=2?"disabled":"")+'>×</button>';
+    const nm=row.querySelector(".nm-input");
+    nm.addEventListener("change",()=>{ m.name=nm.value.trim()||m.name; save(); renderAll(); });
+    row.querySelector(".child-toggle").addEventListener("click",()=>{ m.isChild=!m.isChild; save(); renderSettings(); });
+    row.querySelector("[data-up]").addEventListener("click",()=>{ if(i>0){[state.members[i-1],state.members[i]]=[state.members[i],state.members[i-1]];save();renderAll();} });
+    row.querySelector("[data-down]").addEventListener("click",()=>{ if(i<state.members.length-1){[state.members[i+1],state.members[i]]=[state.members[i],state.members[i+1]];save();renderAll();} });
+    row.querySelector("[data-del]").addEventListener("click",()=>{ if(state.members.length>2) confirmDeleteMember(m.id); });
+    box.appendChild(row);
+  });
+}
+function confirmDeleteMember(id){
+  const m=state.members.find(x=>x.id===id); if(!m) return;
+  if(!confirm("「"+m.name+"」を削除します。この人物の保有設定・月次データもすべて消えます。よろしいですか？")) return;
+  state.members=state.members.filter(x=>x.id!==id);
+  ["bank","sec","crypto","debt"].forEach(g=>{ delete state.ownership[g][id]; });
+  delete state.secTypeEnabledByPersonAccount[id];
+  for(const mk in state.data){ if(state.data[mk].byMember) delete state.data[mk].byMember[id]; }
+  if(state.settings.mobilePersonId===id) state.settings.mobilePersonId=state.members[0].id;
+  if(state.settings.secTypePersonId===id) state.settings.secTypePersonId=state.members[0].id;
+  if(ui.scope==="p:"+id) ui.scope="all";
+  save(); renderAll(); toast("削除しました");
+}
+
+function renderMasterList(group,elId){
+  const box=document.getElementById(elId);
+  const arr=state.masters[group];
+  box.innerHTML="";
+  if(!arr.length){ box.innerHTML='<div class="empty" style="padding:10px 0;">未登録です</div>'; return; }
+  arr.forEach((name,i)=>{
+    const row=document.createElement("div"); row.className="master-item";
+    row.innerHTML='<span class="nm">'+escapeHtml(name)+'</span>'+
+      '<button class="icon-btn" data-up '+(i===0?"disabled":"")+'>↑</button>'+
+      '<button class="icon-btn" data-down '+(i===arr.length-1?"disabled":"")+'>↓</button>'+
+      '<button class="icon-btn del" data-del>×</button>';
+    row.querySelector("[data-up]").addEventListener("click",()=>{ if(i>0){[arr[i-1],arr[i]]=[arr[i],arr[i-1]];save();renderAll();} });
+    row.querySelector("[data-down]").addEventListener("click",()=>{ if(i<arr.length-1){[arr[i+1],arr[i]]=[arr[i],arr[i+1]];save();renderAll();} });
+    row.querySelector("[data-del]").addEventListener("click",()=>confirmDeleteMaster(group,name));
+    box.appendChild(row);
+  });
+}
+function confirmDeleteMaster(group,name){
+  const labels={bank:"銀行",sec:"証券会社",crypto:"暗号資産口座",debt:"負債"};
+  if(!confirm("「"+name+"」を削除します。関連する保有設定や入力済み残高も削除されます。よろしいですか？")) return;
+  state.masters[group]=state.masters[group].filter(x=>x!==name);
+  // remove ownership
+  for(const pid in state.ownership[group]){ state.ownership[group][pid]=(state.ownership[group][pid]||[]).filter(x=>x!==name); }
+  // remove month values
+  for(const mk in state.data){
+    const bm=state.data[mk].byMember||{};
+    for(const pid in bm){
+      const g=bm[pid][group]||{};
+      if(group==="sec"){ Object.keys(g).forEach(k=>{ if(k.split("||")[0]===name) delete g[k]; }); }
+      else { delete g[name]; }
+    }
+  }
+  // sec type settings cleanup
+  if(group==="sec"){
+    for(const pid in state.secTypeEnabledByPersonAccount){ delete state.secTypeEnabledByPersonAccount[pid][name]; }
+    delete state.secTypeEnabledByAccount[name];
+  }
+  save(); renderAll(); toast("削除しました");
+}
+
+function addMaster(group,inputId){
+  const inp=document.getElementById(inputId);
+  const v=inp.value.trim();
+  if(!v){ toast("名称を入力してください"); return; }
+  if(state.masters[group].includes(v)){ toast("同じ名称があります"); return; }
+  state.masters[group].push(v);
+  inp.value="";
+  save(); renderAll();
+}
+
+function renderOwnerTable(group,elId){
+  const tbl=document.getElementById(elId);
+  const arr=state.masters[group];
+  if(!arr.length){ tbl.innerHTML='<tbody><tr><td class="empty">先にマスターを登録してください</td></tr></tbody>'; return; }
+  let html="<thead><tr><th>"+({bank:"銀行",sec:"証券",crypto:"口座",debt:"負債"}[group])+"</th>";
+  state.members.forEach(m=>html+="<th>"+escapeHtml(m.name)+"</th>");
+  html+="</tr></thead><tbody>";
+  arr.forEach(name=>{
+    html+="<tr><td>"+escapeHtml(name)+"</td>";
+    state.members.forEach(m=>{
+      const on=owns(group,m.id,name);
+      html+="<td><button class='chk "+(on?"on":"")+"' data-g='"+group+"' data-pid='"+m.id+"' data-name='"+escapeHtml(name)+"'>"+(on?"✓":"")+"</button></td>";
+    });
+    html+="</tr>";
+  });
+  tbl.innerHTML=html+"</tbody>";
+  tbl.querySelectorAll(".chk").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const g=btn.dataset.g,pid=btn.dataset.pid,name=btn.getAttribute("data-name");
+      setOwn(g,pid,name,!owns(g,pid,name));
+      save(); renderOwnerTable(group,elId);
+    });
+  });
+}
+
+function renderSecTypeSettings(){
+  const sel=document.getElementById("secTypePerson");
+  sel.innerHTML=state.members.map(m=>'<option value="'+m.id+'">'+escapeHtml(m.name)+'</option>').join("");
+  if(!state.members.some(m=>m.id===state.settings.secTypePersonId)) state.settings.secTypePersonId=state.members[0].id;
+  sel.value=state.settings.secTypePersonId;
+  const pid=state.settings.secTypePersonId;
+  const tbl=document.getElementById("secTypeTbl");
+  if(!state.masters.sec.length){ tbl.innerHTML='<tbody><tr><td class="empty">先に証券会社を登録してください</td></tr></tbody>'; return; }
+  let html="<thead><tr><th>区分</th>";
+  state.masters.sec.forEach(acc=>html+="<th>"+escapeHtml(acc)+"</th>");
+  html+="</tr></thead><tbody>";
+  state.secTypes.forEach(type=>{
+    html+="<tr><td>"+escapeHtml(type)+"</td>";
+    state.masters.sec.forEach(acc=>{
+      const on=secTypeEnabled(pid,acc,type);
+      html+="<td><button class='chk "+(on?"on":"")+"' data-acc='"+escapeHtml(acc)+"' data-type='"+escapeHtml(type)+"'>"+(on?"✓":"")+"</button></td>";
+    });
+    html+="</tr>";
+  });
+  tbl.innerHTML=html+"</tbody>";
+  tbl.querySelectorAll(".chk").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const acc=btn.getAttribute("data-acc"),type=btn.getAttribute("data-type");
+      setSecTypeEnabled(pid,acc,type,!secTypeEnabled(pid,acc,type));
+      save(); renderSecTypeSettings();
+    });
+  });
+}
+
+
+/* ===========================================================
+   PIN
+   =========================================================== */
+function showPinLock(){
+  const ov=document.getElementById("pinOverlay");
+  ov.classList.remove("hidden");
+  const inp=document.getElementById("pinInput");
+  inp.value=""; document.getElementById("pinErr").textContent="";
+  setTimeout(()=>inp.focus(),120);
+}
+function tryUnlock(){
+  const inp=document.getElementById("pinInput");
+  if(inp.value===state.settings.pin){
+    document.getElementById("pinOverlay").classList.add("hidden");
+  }else{
+    document.getElementById("pinErr").textContent="PINが違います";
+    inp.value=""; inp.focus();
+  }
+}
+function renderPinPanel(){
+  const en=state.settings.pinEnabled;
+  const chk=document.getElementById("pinEnableChk");
+  chk.classList.toggle("on",en); chk.textContent=en?"✓":"";
+  document.getElementById("pinSetArea").classList.toggle("hidden",!en);
+  document.getElementById("pinSetInput").value=state.settings.pin||"";
+}
+
+/* ===========================================================
+   BACKUP / RESTORE
+   =========================================================== */
+function exportJson(){
+  const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a"); a.href=url; a.download="asset_backup.json";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+  toast("書き出しました");
+}
+function importJson(file){
+  const r=new FileReader();
+  r.onload=()=>{
+    let parsed;
+    try{ parsed=JSON.parse(r.result); }catch(e){ toast("ファイルが壊れています"); return; }
+    if(!parsed||!parsed.settings||!parsed.members||!parsed.data){ toast("資産管理アプリのバックアップではありません"); return; }
+    if(!confirm("現在のデータを、選んだファイルの内容で置き換えます。よろしいですか？")) return;
+    state=migrate(parsed);
+    save(); applyTheme();
+    toast("復元しました");
+    location.reload();
+  };
+  r.onerror=()=>toast("読み込みに失敗しました");
+  r.readAsText(file);
+}
+
+/* ===========================================================
+   NAVIGATION
+   =========================================================== */
+function switchTab(v){
+  // leaving the monthly tab with unsaved edits?
+  if(ui.tab==="month" && v!=="month" && ui.dirty){
+    if(!confirm("未保存の変更があります。保存せずに移動しますか？")){
+      // stay: keep tabbar highlight on month
+      document.querySelectorAll("#tabbar button").forEach(b=>b.classList.toggle("on",b.dataset.v==="month"));
+      return;
+    }
+    clearDirty();
+  }
+  ui.tab=v;
+  if(v!=="dash") document.body.classList.remove("dash-compact");
+  document.querySelectorAll(".view").forEach(el=>el.classList.remove("active"));
+  document.getElementById("view-"+v).classList.add("active");
+  document.querySelectorAll("#tabbar button").forEach(b=>b.classList.toggle("on",b.dataset.v===v));
+  if(v==="dash") renderDashboard();
+  if(v==="month") renderMonthly();
+  if(v==="settings"){ renderSettings(); renderSetPanel(); }
+  if(v==="backup") renderPinPanel();
+  window.scrollTo(0,0);
+}
+function renderSetPanel(){
+  document.querySelectorAll(".set-panel").forEach(p=>p.classList.add("hidden"));
+  document.getElementById("set-"+ui.setPanel).classList.remove("hidden");
+  document.querySelectorAll("#setTabs button").forEach(b=>b.classList.toggle("on",b.dataset.s===ui.setPanel));
+}
+
+function renderAll(){
+  buildScopeSelect();
+  if(ui.tab==="dash") renderDashboard();
+  else if(ui.tab==="month") renderMonthly();
+  else if(ui.tab==="settings"){ renderSettings(); renderSetPanel(); }
+  else if(ui.tab==="backup") renderPinPanel();
+}
+
+/* ===========================================================
+   UNSAVED (dirty) indicator
+   =========================================================== */
+function markDirty(){ ui.dirty=true; updateDirtyUI(); }
+function clearDirty(){ ui.dirty=false; updateDirtyUI(); }
+function tryChangeMonth(mk){
+  if(!mk) return;
+  if(ui.dirty){
+    if(!confirm("未保存の変更があります。保存せずに別の月へ移動しますか？")) return;
+  }
+  clearDirty();
+  ui.emMonth=mk;
+  renderMonthly();
+}
+function updateDirtyUI(){
+  const bar=document.getElementById("dirtyBar");
+  const btn=document.getElementById("saveMonth");
+  if(bar) bar.classList.toggle("hidden",!ui.dirty);
+  if(btn) btn.classList.toggle("is-dirty",ui.dirty);
+}
+
+/* ===========================================================
+   MONTH SAVE / DELETE
+   =========================================================== */
+function saveCurrentMonth(){
+  const mk=ui.emMonth;
+  // commit memo
+  state.data[mk]=state.data[mk]||{memo:"",byMember:{}};
+  state.data[mk].memo=document.getElementById("mMemo").value;
+  // amount inputs already commit on blur; force-commit any focused
+  if(document.activeElement&&document.activeElement.classList&&document.activeElement.classList.contains("cell-amt")){
+    document.activeElement.blur();
+  }
+  // if month has no input at all, do not keep as saved month
+  if(!monthHasInput(mk)){
+    delete state.data[mk];
+    save(); clearDirty(); toast("入力がないため保存されませんでした"); renderMonthly(); return;
+  }
+  save();
+  clearDirty();
+  ui.dashMonth=mk;
+  toast("保存しました");
+  switchTab("dash");
+}
+function deleteCurrentMonth(){
+  const mk=ui.emMonth;
+  if(!state.data[mk]){ toast("この月のデータはありません"); return; }
+  if(!confirm(fmtMonthLabel(mk)+"のデータをすべて削除します。よろしいですか？")) return;
+  delete state.data[mk];
+  save();
+  ui.emMonth=latestMonth()|| new Date().toISOString().slice(0,7);
+  ui.dashMonth=latestMonth();
+  toast("削除しました");
+  renderMonthly();
+}
+
+
+/* ===========================================================
+   EVENT WIRING  (bound once)
+   =========================================================== */
+function bindEvents(){
+  // bottom tabs
+  document.querySelectorAll("#tabbar button").forEach(b=>{
+    b.addEventListener("click",()=>switchTab(b.dataset.v));
+  });
+  // dashboard scope
+  document.getElementById("scopeSel").addEventListener("change",e=>{ ui.scope=e.target.value; renderDashboard(); });
+  // dashboard month nav
+  document.getElementById("mPrev").addEventListener("click",()=>{ const a=inputMonths();const i=a.indexOf(ui.dashMonth); if(i>0){ui.dashMonth=a[i-1];renderDashboard();} });
+  document.getElementById("mNext").addEventListener("click",()=>{ const a=inputMonths();const i=a.indexOf(ui.dashMonth); if(i>=0&&i<a.length-1){ui.dashMonth=a[i+1];renderDashboard();} });
+  // range tabs
+  document.getElementById("rng1y").addEventListener("click",()=>{ ui.range="1y"; document.getElementById("rng1y").classList.add("on"); document.getElementById("rngAll").classList.remove("on"); renderLine(); });
+  document.getElementById("rngAll").addEventListener("click",()=>{ ui.range="all"; document.getElementById("rngAll").classList.add("on"); document.getElementById("rng1y").classList.remove("on"); renderLine(); });
+  // trend mode (net / stacked)
+  document.getElementById("modeNet").addEventListener("click",()=>{ ui.trendMode="net"; document.getElementById("modeNet").classList.add("on"); document.getElementById("modeStack").classList.remove("on"); document.getElementById("trendTitle").textContent="資産推移"; renderLine(); });
+  document.getElementById("modeStack").addEventListener("click",()=>{ ui.trendMode="stack"; document.getElementById("modeStack").classList.add("on"); document.getElementById("modeNet").classList.remove("on"); document.getElementById("trendTitle").textContent="資産クラス別の推移"; renderLine(); });
+
+  // monthly month controls
+  document.getElementById("emMonth").addEventListener("change",e=>{ tryChangeMonth(e.target.value); });
+  document.getElementById("emPrev").addEventListener("click",()=>{ tryChangeMonth(shiftMonth(ui.emMonth,-1)); });
+  document.getElementById("emNext").addEventListener("click",()=>{ tryChangeMonth(shiftMonth(ui.emMonth,1)); });
+  document.getElementById("loadSel").addEventListener("click",()=>{ const v=document.getElementById("savedMonths").value; if(v) tryChangeMonth(v); });
+  document.getElementById("savedMonths").addEventListener("change",e=>{ if(e.target.value) tryChangeMonth(e.target.value); });
+  document.getElementById("gotoLatest").addEventListener("click",()=>{ tryChangeMonth(latestMonth()||ui.emMonth); });
+  document.getElementById("delMonth").addEventListener("click",deleteCurrentMonth);
+  document.getElementById("saveMonth").addEventListener("click",saveCurrentMonth);
+  document.getElementById("mobilePerson").addEventListener("change",e=>{ state.settings.mobilePersonId=e.target.value; save(); renderMonthly(); });
+  document.getElementById("mMemo").addEventListener("input",()=>{ const mk=ui.emMonth; state.data[mk]=state.data[mk]||{memo:"",byMember:{}}; state.data[mk].memo=document.getElementById("mMemo").value; markDirty(); });
+
+  // settings tabs
+  document.querySelectorAll("#setTabs button").forEach(b=>{
+    b.addEventListener("click",()=>{ ui.setPanel=b.dataset.s; renderSetPanel(); });
+  });
+  // add masters
+  document.getElementById("addMember").addEventListener("click",addMemberFromInput);
+  document.getElementById("newMember").addEventListener("keydown",e=>{ if(e.key==="Enter")addMemberFromInput(); });
+  [["addBank","newBank","bank"],["addSec","newSec","sec"],["addCrypto","newCrypto","crypto"],["addDebt","newDebt","debt"]].forEach(([btn,inp,g])=>{
+    document.getElementById(btn).addEventListener("click",()=>addMaster(g,inp));
+    document.getElementById(inp).addEventListener("keydown",e=>{ if(e.key==="Enter")addMaster(g,inp); });
+  });
+  // sec type person
+  document.getElementById("secTypePerson").addEventListener("change",e=>{ state.settings.secTypePersonId=e.target.value; save(); renderSecTypeSettings(); });
+  document.getElementById("copySecType").addEventListener("click",copySecTypeToAll);
+
+  // theme
+  document.getElementById("colorPicker").addEventListener("input",e=>{ document.getElementById("colorHex").value=e.target.value.toUpperCase(); });
+  document.getElementById("saveColor").addEventListener("click",saveThemeColor);
+  document.getElementById("resetColor").addEventListener("click",()=>{ state.settings.themeColor=DEFAULT_THEME; save(); applyTheme(); renderSettings(); renderAll(); toast("初期色に戻しました"); });
+  // appearance mode
+  document.querySelectorAll("#appearanceSeg button").forEach(b=>{
+    b.addEventListener("click",()=>{
+      state.settings.appearance=b.dataset.mode; save(); applyTheme();
+      renderAppearanceSeg(); renderAll();
+    });
+  });
+
+  // backup
+  document.getElementById("exportBtn").addEventListener("click",exportJson);
+  document.getElementById("importBtn").addEventListener("click",()=>document.getElementById("importFile").click());
+  document.getElementById("importFile").addEventListener("change",e=>{ if(e.target.files[0]) importJson(e.target.files[0]); e.target.value=""; });
+  // pin
+  document.getElementById("pinEnableChk").parentElement.addEventListener("click",()=>{
+    state.settings.pinEnabled=!state.settings.pinEnabled;
+    if(state.settings.pinEnabled&&!/^\d{6}$/.test(state.settings.pin||"")){ /* needs pin */ }
+    save(); renderPinPanel();
+  });
+  document.getElementById("savePin").addEventListener("click",()=>{
+    const v=document.getElementById("pinSetInput").value;
+    if(!/^\d{6}$/.test(v)){ toast("6桁の数字を入力してください"); return; }
+    state.settings.pin=v; save(); toast("PINを保存しました");
+  });
+  document.getElementById("pinInput").addEventListener("keydown",e=>{ if(e.key==="Enter") tryUnlock(); });
+  document.getElementById("pinInput").addEventListener("input",e=>{ if(e.target.value.length===6) tryUnlock(); });
+
+  // resize: only re-render monthly when WIDTH crosses mobile boundary (ignore keyboard height changes)
+  bindResize();
+}
+function shiftMonth(mk,delta){
+  let[y,m]=mk.split("-").map(Number); m+=delta;
+  while(m<1){m+=12;y--;} while(m>12){m-=12;y++;}
+  return y+"-"+String(m).padStart(2,"0");
+}
+function addMemberFromInput(){
+  const inp=document.getElementById("newMember");
+  const v=inp.value.trim(); if(!v){ toast("人物名を入力してください"); return; }
+  const id=uid("person");
+  state.members.push({id,name:v,isChild:false});
+  ["bank","sec","crypto","debt"].forEach(g=>state.ownership[g][id]=[]);
+  inp.value=""; save(); renderAll(); renderSettings();
+}
+function copySecTypeToAll(){
+  const src=state.settings.secTypePersonId;
+  if(!confirm("選択中の人物の証券区分設定を、他の全員にコピーします。よろしいですか？")) return;
+  const srcSettings=state.secTypeEnabledByPersonAccount[src]?deepClone(state.secTypeEnabledByPersonAccount[src]):{};
+  state.members.forEach(m=>{ if(m.id!==src) state.secTypeEnabledByPersonAccount[m.id]=deepClone(srcSettings); });
+  save(); toast("コピーしました"); renderSecTypeSettings();
+}
+function saveThemeColor(){
+  const hex=clampHex(document.getElementById("colorHex").value);
+  if(!hex){ toast("#RRGGBB 形式で入力してください"); return; }
+  state.settings.themeColor=hex; save(); applyTheme();
+  document.getElementById("colorPicker").value=hex; document.getElementById("colorHex").value=hex;
+  renderAll(); toast("テーマカラーを保存しました");
+}
+
+/* resize handling — distinguish width change from keyboard-driven height change */
+let lastW=window.innerWidth, lastMobile=isMobile();
+function bindResize(){
+  window.addEventListener("resize",()=>{
+    const w=window.innerWidth;
+    // only act on meaningful WIDTH change (keyboard changes height, not width)
+    if(Math.abs(w-lastW)<40){ return; }
+    lastW=w;
+    const nowMobile=isMobile();
+    if(nowMobile!==lastMobile){
+      lastMobile=nowMobile;
+      if(ui.tab==="month") renderMonthly();
+      if(ui.tab==="dash") renderDashboard();
+    }else if(ui.tab==="dash"){
+      // width changed but stayed on same side of boundary (e.g. rotation): redraw charts
+      renderDashboard();
+    }
+  });
+}
+
+/* ===========================================================
+   INIT
+   =========================================================== */
+function init(){
+  state=load();
+  applyTheme();
+  ui.dashMonth=latestMonth();
+  ui.emMonth=latestMonth()|| new Date().toISOString().slice(0,7);
+  ui.scope="all";
+  bindEvents();
+  switchTab("dash");
+  if(state.settings.pinEnabled&&/^\d{6}$/.test(state.settings.pin||"")){ showPinLock(); }
+  // warn before closing/reloading with unsaved monthly edits
+  window.addEventListener("beforeunload",e=>{ if(ui.dirty){ e.preventDefault(); e.returnValue=""; } });
+  // follow system dark/light while in auto mode
+  try{
+    const mq=window.matchMedia("(prefers-color-scheme: dark)");
+    const onChange=()=>{ if((state.settings.appearance||"light")==="auto"){ applyAppearance(); renderAll(); } };
+    if(mq.addEventListener) mq.addEventListener("change",onChange);
+    else if(mq.addListener) mq.addListener(onChange);
+  }catch(e){}
+}
+document.addEventListener("DOMContentLoaded",init);
+</script>
+</body>
+</html>
