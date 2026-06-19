@@ -315,10 +315,12 @@ thead .sticky-1{background:var(--surface);z-index:3;}
   /* shrink trend chart */
   body.dash-compact #view-dash .line-holder{height:104px;}
   body.dash-compact #view-dash .range-tabs button{padding:4px 10px;font-size:11.5px;}
-  body.dash-compact #view-dash #trendMode{margin-bottom:6px;}
-  body.dash-compact #view-dash #trendMode button{padding:3px 11px;font-size:11px;}
-  body.dash-compact #view-dash .stack-legend{gap:5px 10px;margin-top:8px;padding-top:8px;}
-  body.dash-compact #view-dash .stack-legend .it{font-size:10.5px;}
+  body.dash-compact #view-dash #trendMode{margin-bottom:4px;}
+  body.dash-compact #view-dash #trendMode button{padding:2px 10px;font-size:10.5px;}
+  body.dash-compact #view-dash .stack-legend{display:grid;grid-template-columns:repeat(3,1fr);
+    gap:4px 6px;margin-top:6px;padding-top:6px;}
+  body.dash-compact #view-dash .stack-legend .it{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  body.dash-compact #view-dash .stack-legend .dot{width:7px;height:7px;flex:0 0 auto;}
 
   /* clamp memo to a few lines */
   body.dash-compact #view-dash .memo-read{font-size:12.5px;line-height:1.55;
@@ -330,6 +332,43 @@ thead .sticky-1{background:var(--surface);z-index:3;}
 }
 @media(min-width:681px){
   .person-picker-mobile{display:none;}
+  .wrap{max-width:1040px;}
+
+  /* dashboard: 資産構成 + 推移 を左右2カラム */
+  #view-dash .dash-2col{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;}
+  #view-dash .dash-2col>.card{margin-bottom:0;}
+
+  /* 資産構成: PCでは円グラフを大きく、凡例を右に */
+  #view-dash .pie-wrap{grid-template-columns:200px 1fr;gap:22px;}
+  #view-dash .pie-canvas-holder{height:200px;}
+  #view-dash .legend{gap:11px;}
+  #view-dash .legend-item{font-size:13.5px;}
+
+  /* 推移グラフはPCでゆったり */
+  #view-dash .line-holder{height:300px;}
+
+  /* 総資産カード: 数字と月ナビをゆったり配置 */
+  #view-dash .total-val{font-size:40px;}
+
+  /* 総資産カード上部: 集計対象を右上に小さく、月ナビ+総資産を左に1行で */
+  #view-dash #totalCard{
+    display:grid;
+    grid-template-columns:1fr auto;
+    grid-template-areas:"scope scope" "main month";
+    column-gap:24px;
+  }
+  #view-dash .scope-row{grid-area:scope;justify-content:flex-end;margin-bottom:4px;}
+  #view-dash .scope-row label{display:none;}
+  #view-dash .scope-select{flex:none;width:auto;min-width:0;padding:6px 30px 6px 12px;font-size:13px;
+    border-radius:9px;font-weight:600;background-position:right 10px center;}
+  #view-dash #totalBlock{grid-area:main;}
+  #view-dash .monthnav{grid-area:month;flex-direction:row;justify-content:center;align-items:center;
+    margin:0;gap:14px;padding-left:24px;border-left:1px solid var(--line);align-self:center;}
+  #view-dash .monthnav .m{min-width:0;white-space:nowrap;}
+}
+@media(min-width:920px){
+  /* 横が十分広いとき、円グラフ列を少し広げてバランスを取る */
+  #view-dash .pie-wrap{grid-template-columns:220px 1fr;}
 }
 </style>
 </head>
@@ -358,7 +397,7 @@ thead .sticky-1{background:var(--surface);z-index:3;}
 
   <!-- ============ DASHBOARD ============ -->
   <section id="view-dash" class="view active">
-    <div class="card">
+    <div class="card" id="totalCard">
       <div class="scope-row">
         <label for="scopeSel">集計対象</label>
         <select id="scopeSel" class="scope-select"></select>
@@ -381,6 +420,7 @@ thead .sticky-1{background:var(--surface);z-index:3;}
       <div class="debt-grid" id="debtGrid"></div>
     </div>
 
+    <div class="dash-2col">
     <div class="card">
       <div class="card-h"><span class="eyebrow">Allocation</span><h3 style="margin-left:auto">資産構成</h3></div>
       <div id="pieArea"></div>
@@ -400,6 +440,7 @@ thead .sticky-1{background:var(--surface);z-index:3;}
       </div>
       <div id="lineArea"><div class="line-holder"><canvas id="lineCanvas"></canvas></div></div>
       <div id="stackLegend" class="stack-legend hidden"></div>
+    </div>
     </div>
 
     <div class="card">
@@ -651,7 +692,7 @@ function shades(hex,n){
 
 let state=null;
 let charts={pie:null,line:null};
-let ui={tab:"dash",dashMonth:null,emMonth:null,range:"1y",trendMode:"net",setPanel:"people",scope:"all",pendingPinAction:null,dirty:false};
+let ui={tab:"dash",dashMonth:null,emMonth:null,range:"1y",trendMode:"net",setPanel:"people",scope:"all",pendingPinAction:null,dirty:false,lineHolderH:null};
 
 /* ===========================================================
    STATE: load / migrate / save
@@ -932,10 +973,52 @@ function renderDashboard(){
 
   renderDebtCard(mk,net,debt);
   renderPie(mk);
+  ui.lineHolderH=null; // recompute compact-fit height fresh for this render
   renderLine();
   // memo
   document.getElementById("memoTitle").textContent=fmtMonthLabel(mk)+"のメモ";
   setMemoRead((state.data[mk]&&state.data[mk].memo)||"");
+  if(isMobile()){
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      fitDashboardHeight();
+      requestAnimationFrame(()=>requestAnimationFrame(fitDashboardHeight));
+    }));
+  }
+}
+
+/* On the compact mobile dashboard, stretch the trend chart so the memo
+   card's bottom lands closer to the viewport bottom (above the tabbar),
+   instead of leaving empty space below the memo. Only grows the chart —
+   never shrinks it below its natural height, so it's never crushed. */
+function fitDashboardHeight(){
+  if(!document.body.classList.contains("dash-compact")) return;
+  const holder=document.querySelector("#view-dash .line-holder");
+  const memoCard=document.getElementById("memoTitle");
+  const tabbar=document.getElementById("tabbar");
+  if(!holder||!memoCard||!tabbar) return;
+  const memoCardEl=memoCard.closest(".card");
+  if(!memoCardEl) return;
+  const tabbarTop=tabbar.getBoundingClientRect().top;
+  const memoBottom=memoCardEl.getBoundingClientRect().bottom;
+  const diff=tabbarTop-memoBottom-8; // positive = room to grow
+  if(diff<=6) return; // no meaningful slack (or already overflowing) — leave the chart at its natural size
+  const cur=holder.getBoundingClientRect().height;
+  const target=Math.min(cur+diff,380);
+  if(target-cur<6) return;
+  ui.lineHolderH=Math.round(target);
+  renderLine();
+}
+/* called after trend-mode/range toggles: redraw then re-fit compact height */
+function refitTrend(){
+  ui.lineHolderH=null;
+  renderLine();
+  if(isMobile()){
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      fitDashboardHeight();
+      // run a second pass in case the legend wrapped to a different number of rows
+      requestAnimationFrame(()=>requestAnimationFrame(fitDashboardHeight));
+    }));
+  }
 }
 
 function setMemoRead(txt){
@@ -1006,7 +1089,9 @@ function chartColors(){
     pointBorder:(cs.getPropertyValue("--card")||"#fff").trim()
   };
 }
+let lineRenderToken=0;
 function renderLine(){
+  const myToken=++lineRenderToken;
   const area=document.getElementById("lineArea");
   const stackLegend=document.getElementById("stackLegend");
   let months=inputMonths();
@@ -1015,6 +1100,13 @@ function renderLine(){
   if(ui.range==="1y"){ months=months.slice(-12); }
   if(!months.length){ area.innerHTML='<div class="empty">推移を表示するデータがありません。</div>'; stackLegend.classList.add("hidden"); if(charts.line){charts.line.destroy();charts.line=null;} return; }
   area.innerHTML='<div class="line-holder"><canvas id="lineCanvas"></canvas></div>';
+  if(document.body.classList.contains("dash-compact")){
+    const lh=area.querySelector(".line-holder");
+    if(lh){
+      if(ui.lineHolderH){ lh.style.height=ui.lineHolderH+"px"; }
+      else if(ui.trendMode==="stack"){ lh.style.height="78px"; } // legend takes extra room below
+    }
+  }
   const labels=months.map(m=>{const[y,mo]=m.split("-");return y.slice(2)+"/"+parseInt(mo,10);});
   const c=clampHex(state.settings.themeColor)||DEFAULT_THEME;
   if(charts.line){charts.line.destroy();charts.line=null;}
@@ -1041,9 +1133,11 @@ function renderLine(){
   }
 
   const makeLine=()=>{
+    if(myToken!==lineRenderToken) return; // a newer renderLine() call superseded this one
     const cv=document.getElementById("lineCanvas");
     const holder=cv?cv.parentElement:null;
     if(!cv||!holder) return;
+    if(charts.line){ charts.line.destroy(); charts.line=null; } // guard against any stray instance
     const w=holder.clientWidth||300, h=holder.clientHeight||200;
     cv.style.width=w+"px"; cv.style.height=h+"px";
     cv.width=w; cv.height=h;
@@ -1595,11 +1689,11 @@ function bindEvents(){
   document.getElementById("mPrev").addEventListener("click",()=>{ const a=inputMonths();const i=a.indexOf(ui.dashMonth); if(i>0){ui.dashMonth=a[i-1];renderDashboard();} });
   document.getElementById("mNext").addEventListener("click",()=>{ const a=inputMonths();const i=a.indexOf(ui.dashMonth); if(i>=0&&i<a.length-1){ui.dashMonth=a[i+1];renderDashboard();} });
   // range tabs
-  document.getElementById("rng1y").addEventListener("click",()=>{ ui.range="1y"; document.getElementById("rng1y").classList.add("on"); document.getElementById("rngAll").classList.remove("on"); renderLine(); });
-  document.getElementById("rngAll").addEventListener("click",()=>{ ui.range="all"; document.getElementById("rngAll").classList.add("on"); document.getElementById("rng1y").classList.remove("on"); renderLine(); });
+  document.getElementById("rng1y").addEventListener("click",()=>{ ui.range="1y"; document.getElementById("rng1y").classList.add("on"); document.getElementById("rngAll").classList.remove("on"); refitTrend(); });
+  document.getElementById("rngAll").addEventListener("click",()=>{ ui.range="all"; document.getElementById("rngAll").classList.add("on"); document.getElementById("rng1y").classList.remove("on"); refitTrend(); });
   // trend mode (net / stacked)
-  document.getElementById("modeNet").addEventListener("click",()=>{ ui.trendMode="net"; document.getElementById("modeNet").classList.add("on"); document.getElementById("modeStack").classList.remove("on"); document.getElementById("trendTitle").textContent="資産推移"; renderLine(); });
-  document.getElementById("modeStack").addEventListener("click",()=>{ ui.trendMode="stack"; document.getElementById("modeStack").classList.add("on"); document.getElementById("modeNet").classList.remove("on"); document.getElementById("trendTitle").textContent="資産クラス別の推移"; renderLine(); });
+  document.getElementById("modeNet").addEventListener("click",()=>{ ui.trendMode="net"; document.getElementById("modeNet").classList.add("on"); document.getElementById("modeStack").classList.remove("on"); document.getElementById("trendTitle").textContent="資産推移"; refitTrend(); });
+  document.getElementById("modeStack").addEventListener("click",()=>{ ui.trendMode="stack"; document.getElementById("modeStack").classList.add("on"); document.getElementById("modeNet").classList.remove("on"); document.getElementById("trendTitle").textContent="資産クラス別の推移"; refitTrend(); });
 
   // monthly month controls
   document.getElementById("emMonth").addEventListener("change",e=>{ tryChangeMonth(e.target.value); });
